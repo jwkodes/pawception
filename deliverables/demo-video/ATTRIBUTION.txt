@@ -1,0 +1,44 @@
+Pawception — three-minute demo attribution
+
+Footage sources
+
+Kitten Stuck In Can — Shop with Me Mama
+Source: https://www.youtube.com/watch?v=rdxUbjgg1Lw
+License: CC BY — https://www.youtube.com/t/creative_commons
+Changes: video excerpts and application captures, resized/cropped, original audio muted, captions and generated narration.
+
+Pets Rescued From House Fire Seen Via Ring Doorbell & Stickup Cam | RingTV — Ring
+Source: https://www.youtube.com/watch?v=8zffAHmoPg4
+License: CC BY — https://www.youtube.com/t/creative_commons
+Changes: video excerpts and application captures, resized/cropped, original audio muted, captions and generated narration.
+
+RSPCA rescues dog caught in pool fence — RSPCA South Australia
+Source: https://www.youtube.com/watch?v=n1OXCBzALyY
+License: CC BY — https://www.youtube.com/t/creative_commons
+Changes: short excerpt, resized, original audio muted, playback slowed to 0.6×, title framing, captions and generated narration.
+
+Owner caught dog chewing on her furniture! — Furbo Pet Camera
+Source: https://www.youtube.com/watch?v=SxTn8YjeTGE
+License: CC BY — https://www.youtube.com/t/creative_commons
+Changes: footage and stills shown in application captures and diagrams, resized/cropped, original audio muted, edited timing, captions and generated narration.
+
+Dog Barking - Free Stock Footage — ChannelCro - Stock Footage
+Source: https://www.youtube.com/watch?v=5OjbMgvwJCg
+License: CC BY — https://www.youtube.com/t/creative_commons
+Changes: excerpted footage and original soundtrack, volume normalization, application captures, resizing/cropping, edited timing and generated narration.
+
+4-hour observation camera of a cat alone (Not a pig) — Cat Momi
+Source: https://www.youtube.com/watch?v=IBqVxIqLcE0
+License: CC BY — https://www.youtube.com/t/creative_commons
+Changes: sampled footage, video excerpts and stills shown in application captures, pet masks, heatmaps and approximate 3D visualizations; resized/cropped, muted audio, edited timing and generated narration.
+Shown event-search and SAM results cover source time 00:00–10:00. Geometry and occupancy times are estimates.
+
+Production credits
+
+Application captures, Pawception logo, explanatory diagrams, evaluation charts and closing design: Pawception project.
+Model outputs shown are real saved results. Processing waits are shortened; editorial cursor animations and original synthesized mouse clicks emphasize interactions.
+Evaluation charts use the frozen development report, annotation revision 11.
+Narration: Kokoro v1.0 (local ONNX), preset voice af_heart.
+Kokoro model: https://huggingface.co/hexgrad/Kokoro-82M — Apache-2.0 weights.
+kokoro-onnx runtime: https://github.com/thewh1teagle/kokoro-onnx — MIT.
+No endorsement by source creators is implied.

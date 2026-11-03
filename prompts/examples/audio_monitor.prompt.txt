@@ -1,0 +1,13 @@
+Listen to the attached audio and check these monitoring events:
+- barking: A dog barks repeatedly in an audible bout.
+
+For each event return detected (true or false), evidence (a short explanation),
+and intervals (start/end seconds when the event is audible).
+Return true when the audible evidence supports the described event, otherwise
+false with an empty intervals array. Use the full recording and context.
+Times are relative to this recording: 0 <= start < end <= 60.000000000 seconds.
+Loudness is relative to the recording, not a calibrated room decibel level.
+Both pet_segmentation_prompt and object_segmentation_prompt must be null because
+this input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.
+Report events only; the backend decides when to alert.
+Return only JSON matching the supplied schema.

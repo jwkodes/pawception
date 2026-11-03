@@ -1,0 +1,14 @@
+Review this video for potential hazards involving the animals. It is valid to find
+no clear hazard. Do not invent a concern just because you have been asked to look.
+
+For each potential hazard, give:
+- The approximate timestamp or interval in seconds from the start of the clip.
+- The visible behavior and the objects involved.
+- Why that specific interaction might cause harm.
+- What remains uncertain and what additional evidence would help.
+
+Keep visible observations separate from possible consequences. Do not claim an
+object is powered, hot, toxic, sharp, or being swallowed unless the video provides
+evidence. Do not diagnose medical conditions or assume ordinary play is aggression.
+Finish by stating whether the clip shows a clear concern, an uncertain concern, or
+no clear concern, and explain briefly.

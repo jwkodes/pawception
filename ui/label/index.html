@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pawception · Label videos</title><link rel="stylesheet" href="/label.css"><script src="/label.js" defer></script></head>
+<body>
+  <header><a class="brand" href="/"><img class="brand-mark" src="/pawception-logo.png" alt="" width="44" height="44"><span>pawception</span></a><nav aria-label="Pawception pages"><a href="/monitor">Monitor</a><a href="/offline">Recording analysis</a><a href="/label" aria-current="page">Label videos</a></nav><span class="mode">HUMAN REVIEW · NO INFERENCE</span></header>
+  <main>
+    <div class="heading"><div><p class="eyebrow">BEFORE WE TEST THE MODELS</p><h1>Label what actually happens.</h1><p>Review the video, mark each event, and confirm its time intervals. Suggested focus labels are proposals—not ground truth.</p></div><div class="overall"><strong id="overall-count">0 / 9</strong><span>included clips confirmed</span><progress id="overall-progress" max="9" value="0" aria-label="Confirmed clips"></progress><button id="export" class="secondary">Download labels JSON ↓</button></div></div>
+    <p id="page-error" class="error" role="alert" hidden></p>
+    <p id="all-ready" class="ready" role="status" hidden>All included clips are confirmed. Labels are ready for evaluation. Labeling does not start model inference.</p>
+    <div class="workspace">
+      <aside><div class="sidebar-title"><h2>Proposed clips</h2><span id="clip-count"></span></div><div id="clip-list" class="clip-list" aria-label="Videos to label"></div><p class="aside-note">These are existing development clips, not a held-out test set. Ambiguous evidence can be excluded from scoring.</p></aside>
+      <div class="review-workspace">
+        <section class="video-card" aria-labelledby="clip-title">
+          <div class="title-row"><div><p id="clip-number" class="eyebrow"></p><h2 id="clip-title">Loading videos…</h2></div><span id="saved-status" class="badge">Not reviewed</span></div>
+          <p id="suggested-focus" class="focus-note"></p>
+          <video id="label-video" controls muted playsinline preload="metadata" aria-label="Ground-truth review video"></video>
+          <div class="playback"><button id="previous-frame" class="secondary" title="Pause and move back one frame">−1 frame</button><button id="next-frame" class="secondary" title="Pause and move forward one frame">+1 frame</button><output id="video-time">0.00 / 0.00s</output><label>Speed<select id="playback-speed" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label><button id="sound" class="secondary" aria-label="Unmute review video">🔇 Sound off</button></div>
+          <p id="audio-note" class="audio-note"></p><p id="video-credit" class="credit"></p>
+          <details><summary>How to label</summary><ul><li><strong>Observed:</strong> add one interval per continuous visit or bout. Use the playhead buttons or type seconds.</li><li><strong>Not observed:</strong> an explicit negative after reviewing the whole clip.</li><li><strong>Cannot tell:</strong> ambiguous or unavailable evidence; excluded from accuracy. Barking needs usable audio.</li><li>Safety Watch concerns visible dangerous circumstances. Mask interaction alone does not establish ingestion or entanglement.</li></ul><p>The proposed focus is only a starting point. Review every event on every clip. No model outputs are displayed.</p></details>
+        </section>
+        <section class="annotations" aria-labelledby="labels-title">
+          <div class="title-row"><div><h2 id="labels-title">Events and intervals</h2><p id="labels-progress"></p></div><button id="remaining-negative" class="secondary">Mark remaining events not observed</button></div>
+          <div id="event-cards"></div>
+        </section>
+        <section class="save-panel">
+          <label class="check"><input id="include-clip" type="checkbox" checked> Include this clip in the evaluation</label>
+          <label class="check"><input id="reviewed-clip" type="checkbox"> I reviewed the whole clip, including audio where available.</label>
+          <p id="save-status" role="status">Labels are saved only after you choose Save draft or Confirm clip.</p>
+          <div class="save-actions"><button id="reload-saved" class="secondary">Reload saved labels</button><button id="save-draft" class="secondary">Save draft</button><button id="confirm-clip" class="primary">Confirm clip</button><button id="next-clip" class="secondary">Next clip →</button></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>Manual annotations stay separate from model predictions. Saving or confirming labels never runs inference.</footer>
+</body></html>

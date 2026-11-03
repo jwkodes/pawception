@@ -1,0 +1,226 @@
+{
+  "type": "json_schema",
+  "name": "pet_event_detections",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "furniture_chewing": {
+        "type": "object",
+        "properties": {
+          "detected": {
+            "type": "boolean"
+          },
+          "intervals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "number"
+                },
+                "end": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "start",
+                "end"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "pet_segmentation_prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 120
+          },
+          "object_segmentation_prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 120
+          },
+          "evidence_timestamp": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "pet_bbox": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "object_bbox": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "detected",
+          "intervals",
+          "evidence",
+          "pet_segmentation_prompt",
+          "object_segmentation_prompt",
+          "evidence_timestamp",
+          "pet_bbox",
+          "object_bbox"
+        ],
+        "additionalProperties": false
+      },
+      "hazards": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "electrical",
+                "entanglement",
+                "ingestion",
+                "fall",
+                "heat",
+                "fire",
+                "smoke",
+                "flooding",
+                "aggression",
+                "injury",
+                "other"
+              ]
+            },
+            "subject": {
+              "type": "string"
+            },
+            "target": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "evidence": {
+              "type": "string"
+            },
+            "intervals": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "start": {
+                    "type": "number"
+                  },
+                  "end": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "pet_segmentation_prompt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 120
+            },
+            "object_segmentation_prompt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 120
+            },
+            "evidence_timestamp": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "pet_bbox": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "object_bbox": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          },
+          "required": [
+            "id",
+            "kind",
+            "subject",
+            "target",
+            "title",
+            "evidence",
+            "intervals",
+            "pet_segmentation_prompt",
+            "object_segmentation_prompt",
+            "evidence_timestamp",
+            "pet_bbox",
+            "object_bbox"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "furniture_chewing",
+      "hazards"
+    ],
+    "additionalProperties": false
+  }
+}

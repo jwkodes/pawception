@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3D pet hotspots</title><link rel="stylesheet" href="/spatial.css"><script src="/spatial.js" defer></script></head>
+<body>
+  <div class="toolbar"><div class="views" role="group" aria-label="3D result view"><button data-view="both" aria-pressed="true">Room + heatmap</button><button data-view="room" aria-pressed="false">Room</button><button data-view="heat" aria-pressed="false">Heatmap</button></div><button id="reset">Reset view</button><button id="camera">Camera view</button></div>
+  <label class="threshold">Show voxels with at least <output id="threshold-label">0%</output> of peak time <input id="threshold" aria-label="Minimum voxel duration as percentage of peak" type="range" min="0" max="50" step="1" value="0"><span>0% shows all visits</span></label>
+  <div id="viewport"><canvas id="scene" aria-label="Interactive 3D room and pet heatmap. Drag to rotate; scroll to zoom; Shift-drag to pan." tabindex="0"></canvas><div id="tooltip" hidden></div><div id="loading" role="status">Loading saved 3D map…</div><div class="instructions">Drag to rotate · Scroll to zoom · Shift-drag to pan · Click a voxel to review</div></div>
+  <div class="legend"><span>Less time</span><i></i><span>More time</span><span id="summary"></span></div>
+  <p id="details"></p>
+</body></html>

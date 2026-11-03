@@ -1,0 +1,33 @@
+{
+  "type": "json_schema",
+  "name": "event_description_suggestions",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "suggestions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "label",
+            "description"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "suggestions"
+    ],
+    "additionalProperties": false
+  }
+}

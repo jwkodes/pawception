@@ -1,0 +1,17 @@
+{
+  "name": "Bowl visit versus confirmed drinking",
+  "subject": "The small tricolor puppy with floppy ears, black back, tan head, and white paws.",
+  "scene_context": "The designated bowl is the low white bowl on the wooden floor near the wooden post. The nearby round metal bowl is a different object.",
+  "rules": [
+    {
+      "id": "bowl_visit",
+      "owner_request": "Let me know if my puppy has not visited its designated bowl for 10 seconds of continuous monitoring.",
+      "event_definition": "A visit occurs when the target puppy places its muzzle at or inside the designated white bowl. Detect the visit intervals for this clip; the temporal engine will evaluate the 10-second absence condition. A visit does not require proof of eating or drinking."
+    },
+    {
+      "id": "drinking",
+      "owner_request": "Track whether my puppy actually drinks from the designated bowl.",
+      "event_definition": "Drinking requires visible evidence of liquid consumption, such as repeated tongue-lapping at a visible liquid surface. A lowered head, a muzzle in a bowl, or an assumed bowl purpose alone does not establish drinking. If the relevant mouth action or bowl contents are obscured, report unknown rather than claiming no drinking occurred."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[project]
+name = "pawception"
+version = "0.1.0"
+description = "Personalized pet and household monitoring with the Meta Model API"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "imageio-ffmpeg==0.6.0",
+    "meta-sam-parser==0.1.0",
+    "openai==3.39.0",
+    "pillow==13.0.0",
+    "python-dotenv==1.2.4",
+]
+
+[dependency-groups]
+dev = ["httpx2==2.16.0"]
+moge = [
+    "moge",
+]
+
+[tool.uv]
+package = false
+required-version = "==0.12.21"
+
+[tool.uv.sources]
+moge = { git = "https://github.com/microsoft/MoGe.git", rev = "925b8ed835a7a9cdb7578ba15c658a0afc969030" }

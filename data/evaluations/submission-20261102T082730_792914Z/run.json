@@ -1,0 +1,2643 @@
+{
+  "id": "submission-20261102T082730_792914Z",
+  "status": "completed",
+  "started_at": "2026-11-02T08:27:30.793796+00:00",
+  "dataset_sha256": "149cc56f15a0cb99b993cd92cb5c37392c6d342a8c5800e096ba09a111602efd",
+  "config": {
+    "visual_model": "muse-spark-1.3-contributor",
+    "audio_model": "muse-spark-1.2-contributor",
+    "video_reasoning_effort": "medium",
+    "audio_reasoning_effort": "medium",
+    "window_seconds": 60,
+    "overlap_seconds": 0,
+    "repeats": 1
+  },
+  "git_revision": "dd88c83be3bad2a262405d98673ef627e0c371c2",
+  "code_hashes": {
+    "pawception/live_muse.py": "e614ff4a9005e9d302cf62ab77a5bbe20a92cbbb073dd7d59732937e2bd9fe9a",
+    "pawception/live_inputs.py": "3c4ebf0cfb53e36743079e7cd1fe94df20bddae14131117381d69cab4a89e156",
+    "pawception/audio_inference.py": "fc8d963ad3de13dfd71797add53d70e436e7f0e361b75e0d687f745ba3f92ad3",
+    "pawception/monitor.py": "76973d5d4c2c6f96c7c25fd29299d1b78e18bf9d5eafdf4ce592fad025443b29",
+    "pawception/safety.py": "71b1f491cc91c12e132cf1f406417daab9f599834a742e5695e2490f3d7d1dfd",
+    "pawception/submission_eval.py": "6969ee822fc7ecdceaa69c17d5e7b0d93504c2d523517fa82e4a9263361cf6fb",
+    "scripts/run_pipeline.py": "0dea8b759d83ec0fdd889a6719e99e907481164537aad4f35683693a1fc1658f",
+    "scripts/evaluate_submission.py": "c97c9079bad71f308241535e2e80150dc5af3ddb0455385c4fc5228b796897c7",
+    "uv.lock": "395f9b30d235271f06ac76065deadb3ef20b84d65ef7e01ff65f19bbb37f4e51"
+  },
+  "clips": [
+    {
+      "clip_id": "dog_drinking_8056538",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 7.2,
+            "start_seconds": 0.0,
+            "end_seconds": 7.2,
+            "input_duration_seconds": 7.2,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 180,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "0527f8443a7fa622ebbc130d2a65a0f3968da8426fe70ec788645723a52624a7",
+            "frame_count": 180
+          },
+          "record": {
+            "status": "partial",
+            "output": {
+              "drinking": {
+                "detected": true,
+                "evidence": "Beagle puppy keeps head lowered in white bowl for entire clip with sustained lapping posture consistent with drinking liquid.",
+                "evidence_timestamp": 3.28,
+                "intervals": [
+                  {
+                    "start": 0,
+                    "end": 7.2
+                  }
+                ],
+                "object_bbox": [
+                  280,
+                  590,
+                  480,
+                  750
+                ],
+                "object_segmentation_prompt": "white water bowl",
+                "pet_bbox": [
+                  295,
+                  470,
+                  960,
+                  760
+                ],
+                "pet_segmentation_prompt": "black brown white beagle puppy"
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No food visible and no taking food or chewing observed; puppy's head remains in bowl in a drinking posture.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "Puppy does not bite, chew, or pull furniture; it remains focused on the bowl near the wooden post.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask is visible and no mouthing, carrying, or tugging of a mask occurs.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "Puppy remains on all four paws throughout; no upright balancing on hind legs with front paws off ground.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "a63054a35e936606e885ccb46fde2f6737d7fcb352280fb8f3f01f36563eb4df",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 7.200000000 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 7.200000000.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 7.2,
+                "output": {
+                  "drinking": {
+                    "detected": true,
+                    "evidence": "Beagle puppy keeps head lowered in white bowl for entire clip with sustained lapping posture consistent with drinking liquid.",
+                    "evidence_timestamp": 3.28,
+                    "intervals": [
+                      {
+                        "start": 0,
+                        "end": 7.2
+                      }
+                    ],
+                    "object_bbox": [
+                      280,
+                      590,
+                      480,
+                      750
+                    ],
+                    "object_segmentation_prompt": "white water bowl",
+                    "pet_bbox": [
+                      295,
+                      470,
+                      960,
+                      760
+                    ],
+                    "pet_segmentation_prompt": "black brown white beagle puppy"
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No food visible and no taking food or chewing observed; puppy's head remains in bowl in a drinking posture.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "Puppy does not bite, chew, or pull furniture; it remains focused on the bowl near the wooden post.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask is visible and no mouthing, carrying, or tugging of a mask occurs.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "Puppy remains on all four paws throughout; no upright balancing on hind legs with front paws off ground.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 15.196908792015165,
+                "usage": {
+                  "input_tokens": 3161,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 1751,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1378
+                  },
+                  "total_tokens": 4912
+                },
+                "upload_seconds": 4.239675207994878,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 5.205853124964051,
+                "result_ready_seconds": 19.44078212499153,
+                "cleanup_error": null,
+                "file_id": "file-1634524438266169",
+                "finished_after_run_seconds": 19.78148595802486,
+                "processing_seconds": 19.4657366250176,
+                "finished_at": "2026-11-02T08:27:50.628942+00:00",
+                "cleanup_finished_after_run_seconds": 24.990484708047006
+              }
+            ],
+            "event_errors": {
+              "barking": "Audio unavailable: this window has no usable audio track."
+            },
+            "event_finished_after_run_seconds": {
+              "drinking": 19.78148595802486,
+              "eating": 19.78148595802486,
+              "playing_with_mask": 19.78148595802486,
+              "furniture_chewing": 19.78148595802486,
+              "standing_on_hind_legs": 19.78148595802486
+            },
+            "safety_finished_after_run_seconds": 19.78148595802486,
+            "checks_finished": 1,
+            "checks_total": 1,
+            "audio_available": false,
+            "error": null,
+            "source_available_seconds": 7.2,
+            "finished_after_run_seconds": 24.992504000023473
+          }
+        }
+      ],
+      "total_seconds": 24.998
+    },
+    {
+      "clip_id": "dog_eating_8056266",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 9.68,
+            "start_seconds": 0.0,
+            "end_seconds": 9.68,
+            "input_duration_seconds": 9.68,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 242,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "dd1448980ce63e155c45f9fbe00414f59ba747167b946baa07a2cf0a1a909300",
+            "frame_count": 242
+          },
+          "record": {
+            "status": "partial",
+            "output": {
+              "drinking": {
+                "detected": true,
+                "evidence": "Beagle puppy keeps muzzle in small metal bowl for entire clip with sustained lapping motion consistent with drinking liquid.",
+                "evidence_timestamp": 3.4,
+                "intervals": [
+                  {
+                    "start": 0,
+                    "end": 9.68
+                  }
+                ],
+                "object_bbox": [
+                  180,
+                  415,
+                  385,
+                  575
+                ],
+                "object_segmentation_prompt": "small shiny silver bowl",
+                "pet_bbox": [
+                  135,
+                  30,
+                  430,
+                  595
+                ],
+                "pet_segmentation_prompt": "brown white and black beagle puppy"
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No visible food, taking of food, or chewing; behavior is sustained lapping from bowl consistent with drinking, not eating.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "No furniture contact with mouth; puppy interacts only with metal bowl on wooden floor.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask visible in scene; puppy only interacts with metal bowl.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "Dog remains on all four legs with head down at bowl; never balances upright with both front paws off ground.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "58815c4eb7e58dd6e5d918adb7ee041a161e5a98160cd3fa11623b1772134ea0",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 9.680000000 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 9.680000000.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 9.68,
+                "output": {
+                  "drinking": {
+                    "detected": true,
+                    "evidence": "Beagle puppy keeps muzzle in small metal bowl for entire clip with sustained lapping motion consistent with drinking liquid.",
+                    "evidence_timestamp": 3.4,
+                    "intervals": [
+                      {
+                        "start": 0,
+                        "end": 9.68
+                      }
+                    ],
+                    "object_bbox": [
+                      180,
+                      415,
+                      385,
+                      575
+                    ],
+                    "object_segmentation_prompt": "small shiny silver bowl",
+                    "pet_bbox": [
+                      135,
+                      30,
+                      430,
+                      595
+                    ],
+                    "pet_segmentation_prompt": "brown white and black beagle puppy"
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No visible food, taking of food, or chewing; behavior is sustained lapping from bowl consistent with drinking, not eating.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "No furniture contact with mouth; puppy interacts only with metal bowl on wooden floor.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask visible in scene; puppy only interacts with metal bowl.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "Dog remains on all four legs with head down at bowl; never balances upright with both front paws off ground.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 13.911945917003322,
+                "usage": {
+                  "input_tokens": 3681,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 2083,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1651
+                  },
+                  "total_tokens": 5764
+                },
+                "upload_seconds": 5.260893624974415,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 5.474792750028428,
+                "result_ready_seconds": 19.178728999977466,
+                "cleanup_error": null,
+                "file_id": "file-1702193667927086",
+                "finished_after_run_seconds": 19.55428350000875,
+                "processing_seconds": 19.179700666980352,
+                "finished_at": "2026-11-02T08:28:15.430483+00:00",
+                "cleanup_finished_after_run_seconds": 25.03317979100393
+              }
+            ],
+            "event_errors": {
+              "barking": "Audio unavailable: this window has no usable audio track."
+            },
+            "event_finished_after_run_seconds": {
+              "drinking": 19.55428350000875,
+              "eating": 19.55428350000875,
+              "playing_with_mask": 19.55428350000875,
+              "furniture_chewing": 19.55428350000875,
+              "standing_on_hind_legs": 19.55428350000875
+            },
+            "safety_finished_after_run_seconds": 19.55428350000875,
+            "checks_finished": 1,
+            "checks_total": 1,
+            "audio_available": false,
+            "error": null,
+            "source_available_seconds": 9.68,
+            "finished_after_run_seconds": 25.035175166034605
+          }
+        }
+      ],
+      "total_seconds": 25.041
+    },
+    {
+      "clip_id": "dog_playing_with_mask_8056264",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 12.68,
+            "start_seconds": 0.0,
+            "end_seconds": 12.68,
+            "input_duration_seconds": 12.68,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 317,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "76e9539adf6bea0b8726a13ba6b069e38345ded8c76a48457fb275cad9bcd3ff",
+            "frame_count": 317
+          },
+          "record": {
+            "status": "partial",
+            "output": {
+              "drinking": {
+                "detected": false,
+                "evidence": "No liquid, container, or lapping visible; puppy sniffs and mouths a mask on wooden floor.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No food visible; puppy mouths and carries a white mask, not taking food into mouth or chewing food.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "Puppy noses wooden threshold while holding mask but shows no clear biting, chewing, or pulling of furniture or upholstery.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [
+                {
+                  "evidence": "Beagle puppy mouths, carries and paws at white surgical mask; elastic ear loop wraps around front leg/paw, causing entanglement with risk of tightening, choking, or ingestion.",
+                  "evidence_timestamp": 10.96,
+                  "id": null,
+                  "intervals": [
+                    {
+                      "end": 12.68,
+                      "start": 0
+                    }
+                  ],
+                  "kind": "entanglement",
+                  "object_bbox": [
+                    453,
+                    708,
+                    542,
+                    822
+                  ],
+                  "object_segmentation_prompt": "white surgical face mask",
+                  "pet_bbox": [
+                    280,
+                    540,
+                    660,
+                    920
+                  ],
+                  "pet_segmentation_prompt": "tricolor beagle puppy",
+                  "subject": "tricolor beagle puppy",
+                  "target": "white surgical face mask with elastic ear loops",
+                  "title": "Puppy tangled in face mask ear loop"
+                }
+              ],
+              "playing_with_mask": {
+                "detected": true,
+                "evidence": "Beagle puppy mouths, carries, paws at and tugs a white surgical mask across the wooden floor throughout the clip.",
+                "evidence_timestamp": 5.48,
+                "intervals": [
+                  {
+                    "start": 0,
+                    "end": 12.68
+                  }
+                ],
+                "object_bbox": [
+                  350,
+                  540,
+                  470,
+                  650
+                ],
+                "object_segmentation_prompt": "white surgical face mask",
+                "pet_bbox": [
+                  180,
+                  430,
+                  560,
+                  700
+                ],
+                "pet_segmentation_prompt": "tricolor beagle puppy"
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "Puppy remains on all four paws throughout; never stands or balances upright on hind legs with both front paws off ground.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "2a49ad276af78d044c0a2f7b07f56b26a1ecd8cc1975100beedc16c9553b44ae",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 12.680000000 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 12.680000000.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 12.68,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "No liquid, container, or lapping visible; puppy sniffs and mouths a mask on wooden floor.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No food visible; puppy mouths and carries a white mask, not taking food into mouth or chewing food.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "Puppy noses wooden threshold while holding mask but shows no clear biting, chewing, or pulling of furniture or upholstery.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [
+                    {
+                      "evidence": "Beagle puppy mouths, carries and paws at white surgical mask; elastic ear loop wraps around front leg/paw, causing entanglement with risk of tightening, choking, or ingestion.",
+                      "evidence_timestamp": 10.96,
+                      "id": null,
+                      "intervals": [
+                        {
+                          "end": 12.68,
+                          "start": 0
+                        }
+                      ],
+                      "kind": "entanglement",
+                      "object_bbox": [
+                        453,
+                        708,
+                        542,
+                        822
+                      ],
+                      "object_segmentation_prompt": "white surgical face mask",
+                      "pet_bbox": [
+                        280,
+                        540,
+                        660,
+                        920
+                      ],
+                      "pet_segmentation_prompt": "tricolor beagle puppy",
+                      "subject": "tricolor beagle puppy",
+                      "target": "white surgical face mask with elastic ear loops",
+                      "title": "Puppy tangled in face mask ear loop"
+                    }
+                  ],
+                  "playing_with_mask": {
+                    "detected": true,
+                    "evidence": "Beagle puppy mouths, carries, paws at and tugs a white surgical mask across the wooden floor throughout the clip.",
+                    "evidence_timestamp": 5.48,
+                    "intervals": [
+                      {
+                        "start": 0,
+                        "end": 12.68
+                      }
+                    ],
+                    "object_bbox": [
+                      350,
+                      540,
+                      470,
+                      650
+                    ],
+                    "object_segmentation_prompt": "white surgical face mask",
+                    "pet_bbox": [
+                      180,
+                      430,
+                      560,
+                      700
+                    ],
+                    "pet_segmentation_prompt": "tricolor beagle puppy"
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "Puppy remains on all four paws throughout; never stands or balances upright on hind legs with both front paws off ground.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 22.636383250006475,
+                "usage": {
+                  "input_tokens": 4461,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 3906,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 3375
+                  },
+                  "total_tokens": 8367
+                },
+                "upload_seconds": 7.34456133301137,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 5.135314624989405,
+                "result_ready_seconds": 29.984486208995804,
+                "cleanup_error": null,
+                "file_id": "file-1811400206766922",
+                "finished_after_run_seconds": 30.489974292053375,
+                "processing_seconds": 29.985418749973178,
+                "finished_at": "2026-11-02T08:28:51.438284+00:00",
+                "cleanup_finished_after_run_seconds": 35.62933454202721
+              }
+            ],
+            "event_errors": {
+              "barking": "Audio unavailable: this window has no usable audio track."
+            },
+            "event_finished_after_run_seconds": {
+              "drinking": 30.489974292053375,
+              "eating": 30.489974292053375,
+              "playing_with_mask": 30.489974292053375,
+              "furniture_chewing": 30.489974292053375,
+              "standing_on_hind_legs": 30.489974292053375
+            },
+            "safety_finished_after_run_seconds": 30.489974292053375,
+            "checks_finished": 1,
+            "checks_total": 1,
+            "audio_available": false,
+            "error": null,
+            "source_available_seconds": 12.68,
+            "finished_after_run_seconds": 35.631281542009674
+          }
+        }
+      ],
+      "total_seconds": 35.638
+    },
+    {
+      "clip_id": "06_furniture_chewing",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 14.881533333333334,
+            "start_seconds": 0.0,
+            "end_seconds": 14.881533333333334,
+            "input_duration_seconds": 14.881466666666666,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 446,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "4b56b033da80da0c231769e522a5e7ab7f91c790a34c1f61cd9742204533f52a",
+            "frame_count": 446
+          },
+          "record": {
+            "status": "completed",
+            "output": {
+              "barking": {
+                "detected": false,
+                "evidence": "No audible bout of repeated dog barks detected across 0-14.88s; no sharp repetitive bark vocalizations present.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "drinking": {
+                "detected": false,
+                "evidence": "No liquid container or lapping motion visible; dog stands near chair without drinking.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No food intake or chewing of food visible; dog mouth contacts furniture, not food.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": true,
+                "evidence": "Large golden dog stands beside wooden armchair with mouth on armrest making biting/chewing motions for several seconds.",
+                "evidence_timestamp": 4.5,
+                "intervals": [
+                  {
+                    "end": 10.0,
+                    "start": 0
+                  }
+                ],
+                "object_bbox": [
+                  162,
+                  321,
+                  293,
+                  637
+                ],
+                "object_segmentation_prompt": "dark wood armchair",
+                "pet_bbox": [
+                  235,
+                  233,
+                  677,
+                  763
+                ],
+                "pet_segmentation_prompt": "large golden dog"
+              },
+              "hazards": [],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask visible; dog does not mouth, carry or paw at any mask.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "Dog remains on all four paws throughout; never balances upright with both front paws off ground.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.2-contributor",
+                "media_kind": "audio",
+                "event_ids": [
+                  "barking"
+                ],
+                "status": "completed",
+                "cache_key": "674440fbb9058808f334b4cc2556ab82f27ebec322a317e6866c89af0be60700",
+                "prompt": "Listen to the attached audio and check these monitoring events:\n- barking: A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.\n\nFor each event return detected (true or false), evidence (a short explanation),\nand intervals (start/end seconds when the event is audible).\nReturn true when the audible evidence supports the described event, otherwise\nfalse with an empty intervals array. Use the full recording and context.\nTimes are relative to this recording: 0 <= start < end <= 14.881466667 seconds.\nLoudness is relative to the recording, not a calibrated room decibel level.\nBoth pet_segmentation_prompt and object_segmentation_prompt must be null because\nthis input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.\nReport events only; the backend decides when to alert.\nReturn only JSON matching the supplied schema.",
+                "source_available_seconds": 14.881533333333334,
+                "output": {
+                  "barking": {
+                    "detected": false,
+                    "evidence": "No audible bout of repeated dog barks detected across 0-14.88s; no sharp repetitive bark vocalizations present.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 9.065180624951608,
+                "usage": {
+                  "completion_tokens": 1293,
+                  "prompt_tokens": 379,
+                  "total_tokens": 1672,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": null,
+                    "audio_tokens": null,
+                    "reasoning_tokens": 1216,
+                    "rejected_prediction_tokens": null,
+                    "text_tokens": null
+                  },
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0,
+                    "image_tokens": null,
+                    "text_tokens": null
+                  },
+                  "input_tokens": 379,
+                  "output_tokens": 1293
+                },
+                "upload_seconds": 0,
+                "upload_cleanup": "not_required_inline",
+                "cleanup_seconds": null,
+                "result_ready_seconds": null,
+                "cleanup_error": null,
+                "file_id": null,
+                "finished_after_run_seconds": 9.489011957950424,
+                "processing_seconds": 9.068617583950981,
+                "finished_at": "2026-11-02T08:29:06.104916+00:00",
+                "cleanup_finished_after_run_seconds": 9.489019332977477
+              },
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "f6b44e651a2a221698e6ea40ceeba7733fe77ac52bfdc4229aba694a43aa007f",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: Alert when the pet is biting, chewing, or pulling on furniture. Biting and chewing involve the mouth, while pulling counts whether done with the mouth or paws. Resting at the same time still counts if any of biting, chewing, or pulling is happening.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 14.881466667 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 14.881466667.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 14.881533333333334,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "No liquid container or lapping motion visible; dog stands near chair without drinking.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No food intake or chewing of food visible; dog mouth contacts furniture, not food.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": true,
+                    "evidence": "Large golden dog stands beside wooden armchair with mouth on armrest making biting/chewing motions for several seconds.",
+                    "evidence_timestamp": 4.5,
+                    "intervals": [
+                      {
+                        "end": 10.0,
+                        "start": 0
+                      }
+                    ],
+                    "object_bbox": [
+                      162,
+                      321,
+                      293,
+                      637
+                    ],
+                    "object_segmentation_prompt": "dark wood armchair",
+                    "pet_bbox": [
+                      235,
+                      233,
+                      677,
+                      763
+                    ],
+                    "pet_segmentation_prompt": "large golden dog"
+                  },
+                  "hazards": [],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask visible; dog does not mouth, carry or paw at any mask.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "Dog remains on all four paws throughout; never balances upright with both front paws off ground.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 15.359188250033185,
+                "usage": {
+                  "input_tokens": 5204,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 1900,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1479
+                  },
+                  "total_tokens": 7104
+                },
+                "upload_seconds": 6.553211875027046,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 5.187837290985044,
+                "result_ready_seconds": 21.91674487502314,
+                "cleanup_error": null,
+                "file_id": "file-2856092221444078",
+                "finished_after_run_seconds": 21.933234167052433,
+                "processing_seconds": 21.931050166953355,
+                "finished_at": "2026-11-02T09:08:48.661988+00:00",
+                "cleanup_finished_after_run_seconds": 27.12416133302031
+              }
+            ],
+            "event_errors": {},
+            "event_finished_after_run_seconds": {
+              "barking": 9.489011957950424,
+              "drinking": 21.933234167052433,
+              "eating": 21.933234167052433,
+              "playing_with_mask": 21.933234167052433,
+              "furniture_chewing": 21.933234167052433,
+              "standing_on_hind_legs": 21.933234167052433
+            },
+            "safety_finished_after_run_seconds": 21.933234167052433,
+            "checks_finished": 2,
+            "checks_total": 2,
+            "audio_available": true,
+            "error": null,
+            "source_available_seconds": 14.881533333333334,
+            "finished_after_run_seconds": 23.553053291980177
+          }
+        }
+      ],
+      "total_seconds": 23.559,
+      "mixed_inference_runs": true,
+      "visual_event_description_overrides": {
+        "furniture_chewing": "Alert when the pet is biting, chewing, or pulling on furniture. Biting and chewing involve the mouth, while pulling counts whether done with the mouth or paws. Resting at the same time still counts if any of biting, chewing, or pulling is happening."
+      }
+    },
+    {
+      "clip_id": "04_intensive_barking",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 19.1191,
+            "start_seconds": 0.0,
+            "end_seconds": 19.1191,
+            "input_duration_seconds": 19.119033333333334,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 573,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "5d57104bc8eaa1ce9b795c6d61d594587b4d164b741890c94cce03019d0382a1",
+            "frame_count": 573
+          },
+          "record": {
+            "status": "completed",
+            "output": {
+              "barking": {
+                "detected": true,
+                "evidence": "Repeated sharp dog barks audible in multiple distinct bouts throughout the recording with short pauses between bouts",
+                "evidence_timestamp": null,
+                "intervals": [
+                  {
+                    "start": 0.15,
+                    "end": 3.8
+                  },
+                  {
+                    "start": 4.2,
+                    "end": 9.1
+                  },
+                  {
+                    "start": 9.6,
+                    "end": 12.9
+                  },
+                  {
+                    "start": 13.7,
+                    "end": 18.9
+                  }
+                ],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "drinking": {
+                "detected": false,
+                "evidence": "Dog moves around grassy yard with mouth open panting/barking but no container, liquid, or lapping behavior is visible.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No food is visible and dog does not take anything into mouth or chew; mouth opening is panting/barking.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "Scene is an outdoor grassy yard with no furniture or upholstery; dog does not bite or chew furniture.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask appears in the video; dog does not mouth, carry, or paw at any mask.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "Dog walks and stands on all four legs throughout; no upright posture with both front paws off the ground is observed.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.2-contributor",
+                "media_kind": "audio",
+                "event_ids": [
+                  "barking"
+                ],
+                "status": "completed",
+                "cache_key": "5bc9235370f4f84daf312176ab8a21d42d289926d70a59e222da05d758c2a59b",
+                "prompt": "Listen to the attached audio and check these monitoring events:\n- barking: A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.\n\nFor each event return detected (true or false), evidence (a short explanation),\nand intervals (start/end seconds when the event is audible).\nReturn true when the audible evidence supports the described event, otherwise\nfalse with an empty intervals array. Use the full recording and context.\nTimes are relative to this recording: 0 <= start < end <= 19.119033333 seconds.\nLoudness is relative to the recording, not a calibrated room decibel level.\nBoth pet_segmentation_prompt and object_segmentation_prompt must be null because\nthis input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.\nReport events only; the backend decides when to alert.\nReturn only JSON matching the supplied schema.",
+                "source_available_seconds": 19.1191,
+                "output": {
+                  "barking": {
+                    "detected": true,
+                    "evidence": "Repeated sharp dog barks audible in multiple distinct bouts throughout the recording with short pauses between bouts",
+                    "evidence_timestamp": null,
+                    "intervals": [
+                      {
+                        "start": 0.15,
+                        "end": 3.8
+                      },
+                      {
+                        "start": 4.2,
+                        "end": 9.1
+                      },
+                      {
+                        "start": 9.6,
+                        "end": 12.9
+                      },
+                      {
+                        "start": 13.7,
+                        "end": 18.9
+                      }
+                    ],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 13.498032583971508,
+                "usage": {
+                  "completion_tokens": 2054,
+                  "prompt_tokens": 431,
+                  "total_tokens": 2485,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": null,
+                    "audio_tokens": null,
+                    "reasoning_tokens": 1909,
+                    "rejected_prediction_tokens": null,
+                    "text_tokens": null
+                  },
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0,
+                    "image_tokens": null,
+                    "text_tokens": null
+                  },
+                  "input_tokens": 431,
+                  "output_tokens": 2054
+                },
+                "upload_seconds": 0,
+                "upload_cleanup": "not_required_inline",
+                "cleanup_seconds": null,
+                "result_ready_seconds": null,
+                "cleanup_error": null,
+                "file_id": null,
+                "finished_after_run_seconds": 14.50260295899352,
+                "processing_seconds": 13.501372749975417,
+                "finished_at": "2026-11-02T08:29:34.722324+00:00",
+                "cleanup_finished_after_run_seconds": 14.502612500044052
+              },
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "24517851287b2e74613bd93b2eb770e972a01dbe89a7fb4006b3b6fc541bbc26",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 19.119033333 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 19.119033333.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 19.1191,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "Dog moves around grassy yard with mouth open panting/barking but no container, liquid, or lapping behavior is visible.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No food is visible and dog does not take anything into mouth or chew; mouth opening is panting/barking.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "Scene is an outdoor grassy yard with no furniture or upholstery; dog does not bite or chew furniture.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask appears in the video; dog does not mouth, carry, or paw at any mask.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "Dog walks and stands on all four legs throughout; no upright posture with both front paws off the ground is observed.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 12.269933375006076,
+                "usage": {
+                  "input_tokens": 6281,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 1771,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1424
+                  },
+                  "total_tokens": 8052
+                },
+                "upload_seconds": 11.441805624985136,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 4.172186332987621,
+                "result_ready_seconds": 23.71884616697207,
+                "cleanup_error": null,
+                "file_id": "file-2020257745598468",
+                "finished_after_run_seconds": 24.716232875012793,
+                "processing_seconds": 23.71996354102157,
+                "finished_at": "2026-11-02T08:29:44.935949+00:00",
+                "cleanup_finished_after_run_seconds": 28.892646167019848
+              }
+            ],
+            "event_errors": {},
+            "event_finished_after_run_seconds": {
+              "barking": 14.50260295899352,
+              "drinking": 24.716232875012793,
+              "eating": 24.716232875012793,
+              "playing_with_mask": 24.716232875012793,
+              "furniture_chewing": 24.716232875012793,
+              "standing_on_hind_legs": 24.716232875012793
+            },
+            "safety_finished_after_run_seconds": 24.716232875012793,
+            "checks_finished": 2,
+            "checks_total": 2,
+            "audio_available": true,
+            "error": null,
+            "source_available_seconds": 19.1191,
+            "finished_after_run_seconds": 28.895037542039063
+          }
+        }
+      ],
+      "total_seconds": 28.903
+    },
+    {
+      "clip_id": "05_hind_legs",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 10.01,
+            "start_seconds": 0.0,
+            "end_seconds": 10.01,
+            "input_duration_seconds": 10.009833333333333,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 240,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "3956b4dd70201db14c1225e7f4e78bc82596fd7e01140f50ea6ad120dd034fa6",
+            "frame_count": 240
+          },
+          "record": {
+            "status": "completed",
+            "output": {
+              "barking": {
+                "detected": false,
+                "evidence": "No audible bout of repeated dog barking detected in the 0-10.01s recording.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "drinking": {
+                "detected": false,
+                "evidence": "No liquid, container, or lapping motion visible; two dogs stand in empty white studio.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No food or eating motion visible; dogs are standing and walking with mouths not taking food.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "No furniture or upholstery visible; empty white background with no biting or chewing of furniture.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask visible; no mouthing, carrying, or tugging of a mask occurs.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": true,
+                "evidence": "Gray fluffy dog balances upright on hind legs with both front paws off ground at start of clip while black dog watches.",
+                "evidence_timestamp": 0.5,
+                "intervals": [
+                  {
+                    "start": 0,
+                    "end": 2.7
+                  }
+                ],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": [
+                  320,
+                  15,
+                  780,
+                  820
+                ],
+                "pet_segmentation_prompt": "small gray fluffy dog"
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.2-contributor",
+                "media_kind": "audio",
+                "event_ids": [
+                  "barking"
+                ],
+                "status": "completed",
+                "cache_key": "9de7c6a221be6065c6d8815b81482afdcbcc82af9b48e5b173e49f6c7b741dd2",
+                "prompt": "Listen to the attached audio and check these monitoring events:\n- barking: A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.\n\nFor each event return detected (true or false), evidence (a short explanation),\nand intervals (start/end seconds when the event is audible).\nReturn true when the audible evidence supports the described event, otherwise\nfalse with an empty intervals array. Use the full recording and context.\nTimes are relative to this recording: 0 <= start < end <= 10.009833333 seconds.\nLoudness is relative to the recording, not a calibrated room decibel level.\nBoth pet_segmentation_prompt and object_segmentation_prompt must be null because\nthis input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.\nReport events only; the backend decides when to alert.\nReturn only JSON matching the supplied schema.",
+                "source_available_seconds": 10.01,
+                "output": {
+                  "barking": {
+                    "detected": false,
+                    "evidence": "No audible bout of repeated dog barking detected in the 0-10.01s recording.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 17.465813332994003,
+                "usage": {
+                  "completion_tokens": 3603,
+                  "prompt_tokens": 318,
+                  "total_tokens": 3921,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": null,
+                    "audio_tokens": null,
+                    "reasoning_tokens": 3515,
+                    "rejected_prediction_tokens": null,
+                    "text_tokens": null
+                  },
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cache_write_tokens": null,
+                    "cached_tokens": 99,
+                    "image_tokens": null,
+                    "text_tokens": null
+                  },
+                  "input_tokens": 318,
+                  "output_tokens": 3603
+                },
+                "upload_seconds": 0,
+                "upload_cleanup": "not_required_inline",
+                "cleanup_seconds": null,
+                "result_ready_seconds": null,
+                "cleanup_error": null,
+                "file_id": null,
+                "finished_after_run_seconds": 17.764376749983057,
+                "processing_seconds": 17.46848450001562,
+                "finished_at": "2026-11-02T08:30:06.915817+00:00",
+                "cleanup_finished_after_run_seconds": 17.7643870000029
+              },
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "cfc35e180ae3cc53d00b1997ac3cd2bd036bf8ea99be58dfa6b0cad90fa2be04",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 10.009833333 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 10.009833333.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 10.01,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "No liquid, container, or lapping motion visible; two dogs stand in empty white studio.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No food or eating motion visible; dogs are standing and walking with mouths not taking food.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "No furniture or upholstery visible; empty white background with no biting or chewing of furniture.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask visible; no mouthing, carrying, or tugging of a mask occurs.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": true,
+                    "evidence": "Gray fluffy dog balances upright on hind legs with both front paws off ground at start of clip while black dog watches.",
+                    "evidence_timestamp": 0.5,
+                    "intervals": [
+                      {
+                        "start": 0,
+                        "end": 2.7
+                      }
+                    ],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": [
+                      320,
+                      15,
+                      780,
+                      820
+                    ],
+                    "pet_segmentation_prompt": "small gray fluffy dog"
+                  }
+                },
+                "error": null,
+                "inference_seconds": 11.694354666979052,
+                "usage": {
+                  "input_tokens": 3941,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 114
+                  },
+                  "output_tokens": 1663,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1249
+                  },
+                  "total_tokens": 5604
+                },
+                "upload_seconds": 7.483079833968077,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 4.10285795800155,
+                "result_ready_seconds": 19.183234916999936,
+                "cleanup_error": null,
+                "file_id": "file-1886132912821471",
+                "finished_after_run_seconds": 19.475608000007924,
+                "processing_seconds": 19.184337957995012,
+                "finished_at": "2026-11-02T08:30:08.627049+00:00",
+                "cleanup_finished_after_run_seconds": 23.58500154101057
+              }
+            ],
+            "event_errors": {},
+            "event_finished_after_run_seconds": {
+              "barking": 17.764376749983057,
+              "drinking": 19.475608000007924,
+              "eating": 19.475608000007924,
+              "playing_with_mask": 19.475608000007924,
+              "furniture_chewing": 19.475608000007924,
+              "standing_on_hind_legs": 19.475608000007924
+            },
+            "safety_finished_after_run_seconds": 19.475608000007924,
+            "checks_finished": 2,
+            "checks_total": 2,
+            "audio_available": true,
+            "error": null,
+            "source_available_seconds": 10.01,
+            "finished_after_run_seconds": 23.587359874974936
+          }
+        }
+      ],
+      "total_seconds": 23.596
+    },
+    {
+      "clip_id": "01_cat_in_can",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 15.633333333333333,
+            "start_seconds": 0.0,
+            "end_seconds": 15.633333333333333,
+            "input_duration_seconds": 15.633268229166667,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 469,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "9b4fddaec1d2a1352d778fc28eb6111f0fd4191ab799faf4e1758b3e9d65cd97",
+            "frame_count": 469
+          },
+          "record": {
+            "status": "completed",
+            "output": {
+              "barking": {
+                "detected": false,
+                "evidence": "No dog barking audible throughout the 15.63s recording; only instrumental music and male singing are present with no repeated bark bouts.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "drinking": {
+                "detected": false,
+                "evidence": "No sustained lapping from a liquid container is visible; cat's head is inside an empty food can while moving on bed, with no drinking observed.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "Cat has head inside a 9Lives can but no visible food intake, chewing, or food in mouth is shown; insufficient evidence of eating.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "No biting, chewing, or pulling of furniture or upholstery is visible; cat interacts only with metal food can on bed.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [
+                {
+                  "evidence": "Gray tabby cat on quilted bed has head fully inserted into empty blue metal 9Lives food can and walks blindly while struggling. Person must pull can off to free it. Trapped head creates suffocation and neck injury risk from tight metal rim.",
+                  "evidence_timestamp": 2.0,
+                  "id": null,
+                  "intervals": [
+                    {
+                      "end": 10.5,
+                      "start": 0
+                    }
+                  ],
+                  "kind": "entanglement",
+                  "object_bbox": [
+                    165,
+                    200,
+                    430,
+                    405
+                  ],
+                  "object_segmentation_prompt": "blue metal cat food can",
+                  "pet_bbox": [
+                    240,
+                    35,
+                    700,
+                    430
+                  ],
+                  "pet_segmentation_prompt": "gray tabby cat",
+                  "subject": "tabby cat on bed",
+                  "target": "blue metal 9Lives cat food can stuck on head",
+                  "title": "Cat's head trapped in metal food can"
+                }
+              ],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "Object involved is a metal cat food can, not a surgical face mask; no mouthing, carrying, or tugging of a mask occurs.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "No dog standing upright on hind legs is visible; quadruped tabby cat remains on all fours while moving on bed.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.2-contributor",
+                "media_kind": "audio",
+                "event_ids": [
+                  "barking"
+                ],
+                "status": "completed",
+                "cache_key": "2e7f7936a11628b4e4c1647ed141f8cda7ef920e32035a2fff163d81990253d9",
+                "prompt": "Listen to the attached audio and check these monitoring events:\n- barking: A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.\n\nFor each event return detected (true or false), evidence (a short explanation),\nand intervals (start/end seconds when the event is audible).\nReturn true when the audible evidence supports the described event, otherwise\nfalse with an empty intervals array. Use the full recording and context.\nTimes are relative to this recording: 0 <= start < end <= 15.633268229 seconds.\nLoudness is relative to the recording, not a calibrated room decibel level.\nBoth pet_segmentation_prompt and object_segmentation_prompt must be null because\nthis input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.\nReport events only; the backend decides when to alert.\nReturn only JSON matching the supplied schema.",
+                "source_available_seconds": 15.633333333333333,
+                "output": {
+                  "barking": {
+                    "detected": false,
+                    "evidence": "No dog barking audible throughout the 15.63s recording; only instrumental music and male singing are present with no repeated bark bouts.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 14.274778167018667,
+                "usage": {
+                  "completion_tokens": 3610,
+                  "prompt_tokens": 388,
+                  "total_tokens": 3998,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": null,
+                    "audio_tokens": null,
+                    "reasoning_tokens": 3520,
+                    "rejected_prediction_tokens": null,
+                    "text_tokens": null
+                  },
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cache_write_tokens": null,
+                    "cached_tokens": 99,
+                    "image_tokens": null,
+                    "text_tokens": null
+                  },
+                  "input_tokens": 388,
+                  "output_tokens": 3610
+                },
+                "upload_seconds": 0,
+                "upload_cleanup": "not_required_inline",
+                "cleanup_seconds": null,
+                "result_ready_seconds": null,
+                "cleanup_error": null,
+                "file_id": null,
+                "finished_after_run_seconds": 14.862023667024914,
+                "processing_seconds": 14.277660624997225,
+                "finished_at": "2026-11-02T08:30:27.641931+00:00",
+                "cleanup_finished_after_run_seconds": 14.862034083984327
+              },
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "d9e58eb10b312604ce9c302ee55fa6f72b7fda32c537116f179543b7205bf4ac",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 15.633268229 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 15.633268229.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 15.633333333333333,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "No sustained lapping from a liquid container is visible; cat's head is inside an empty food can while moving on bed, with no drinking observed.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "Cat has head inside a 9Lives can but no visible food intake, chewing, or food in mouth is shown; insufficient evidence of eating.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "No biting, chewing, or pulling of furniture or upholstery is visible; cat interacts only with metal food can on bed.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [
+                    {
+                      "evidence": "Gray tabby cat on quilted bed has head fully inserted into empty blue metal 9Lives food can and walks blindly while struggling. Person must pull can off to free it. Trapped head creates suffocation and neck injury risk from tight metal rim.",
+                      "evidence_timestamp": 2.0,
+                      "id": null,
+                      "intervals": [
+                        {
+                          "end": 10.5,
+                          "start": 0
+                        }
+                      ],
+                      "kind": "entanglement",
+                      "object_bbox": [
+                        165,
+                        200,
+                        430,
+                        405
+                      ],
+                      "object_segmentation_prompt": "blue metal cat food can",
+                      "pet_bbox": [
+                        240,
+                        35,
+                        700,
+                        430
+                      ],
+                      "pet_segmentation_prompt": "gray tabby cat",
+                      "subject": "tabby cat on bed",
+                      "target": "blue metal 9Lives cat food can stuck on head",
+                      "title": "Cat's head trapped in metal food can"
+                    }
+                  ],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "Object involved is a metal cat food can, not a surgical face mask; no mouthing, carrying, or tugging of a mask occurs.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "No dog standing upright on hind legs is visible; quadruped tabby cat remains on all fours while moving on bed.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 12.673544459044933,
+                "usage": {
+                  "input_tokens": 5301,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 2072,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1456
+                  },
+                  "total_tokens": 7373
+                },
+                "upload_seconds": 7.519911832991056,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 5.115614874986932,
+                "result_ready_seconds": 20.19969229202252,
+                "cleanup_error": null,
+                "file_id": "file-2030753064286605",
+                "finished_after_run_seconds": 20.779998041980434,
+                "processing_seconds": 20.200755124969874,
+                "finished_at": "2026-11-02T08:30:33.559902+00:00",
+                "cleanup_finished_after_run_seconds": 25.89904791698791
+              }
+            ],
+            "event_errors": {},
+            "event_finished_after_run_seconds": {
+              "barking": 14.862023667024914,
+              "drinking": 20.779998041980434,
+              "eating": 20.779998041980434,
+              "playing_with_mask": 20.779998041980434,
+              "furniture_chewing": 20.779998041980434,
+              "standing_on_hind_legs": 20.779998041980434
+            },
+            "safety_finished_after_run_seconds": 20.779998041980434,
+            "checks_finished": 2,
+            "checks_total": 2,
+            "audio_available": true,
+            "error": null,
+            "source_available_seconds": 15.633333333333333,
+            "finished_after_run_seconds": 25.9012650839868
+          }
+        }
+      ],
+      "total_seconds": 25.911
+    },
+    {
+      "clip_id": "02_home_fire",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 24.266666666666666,
+            "start_seconds": 0.0,
+            "end_seconds": 24.266666666666666,
+            "input_duration_seconds": 24.266471354166665,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 364,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "7303a606cbb6e312cd1aa8e42624ac0872965c0ef825edef40c6efa73f220287",
+            "frame_count": 364
+          },
+          "record": {
+            "status": "completed",
+            "output": {
+              "barking": {
+                "detected": false,
+                "evidence": "No repetitive dog bark bouts heard across 0-24.27s; audio contains human speech/shouting and loud crashing/banging/clattering sounds but no canine bark vocalizations.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "drinking": {
+                "detected": false,
+                "evidence": "No pet or container with liquid and no lapping behavior is visible in the outdoor or smoke-filled porch views.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No pet taking food into mouth or chewing is visible throughout the video.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "No pet biting or chewing furniture or upholstery is visible; scenes show vehicles, house smoke, and firefighters on a porch.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [
+                {
+                  "evidence": "Thick dark gray and white smoke rises from the house on the left and spreads across the yard from the start, then dense smoke engulfs the porch camera view while firefighters move through it carrying a wire crate. The volume and darkness of smoke and its spread over the property indicates an uncontrolled house fire endangering the home and occupants.",
+                  "evidence_timestamp": 2.0,
+                  "id": null,
+                  "intervals": [
+                    {
+                      "end": 24.26,
+                      "start": 0
+                    }
+                  ],
+                  "kind": "fire",
+                  "object_bbox": [
+                    170,
+                    200,
+                    460,
+                    350
+                  ],
+                  "object_segmentation_prompt": "distant white house",
+                  "pet_bbox": null,
+                  "pet_segmentation_prompt": null,
+                  "subject": "house and surrounding yard and porch area",
+                  "target": "house fire producing heavy dark smoke",
+                  "title": "House on fire with heavy smoke spreading across property"
+                }
+              ],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask and no pet mouthing or carrying such an object is visible.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "No dog standing or balancing upright on hind legs with both front paws off ground is visible.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.2-contributor",
+                "media_kind": "audio",
+                "event_ids": [
+                  "barking"
+                ],
+                "status": "completed",
+                "cache_key": "96bf0b248d5ffd2598cc77b10df16e3e5f5f7cd30d1195472d6a77ccd0cb69e4",
+                "prompt": "Listen to the attached audio and check these monitoring events:\n- barking: A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.\n\nFor each event return detected (true or false), evidence (a short explanation),\nand intervals (start/end seconds when the event is audible).\nReturn true when the audible evidence supports the described event, otherwise\nfalse with an empty intervals array. Use the full recording and context.\nTimes are relative to this recording: 0 <= start < end <= 24.266471354 seconds.\nLoudness is relative to the recording, not a calibrated room decibel level.\nBoth pet_segmentation_prompt and object_segmentation_prompt must be null because\nthis input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.\nReport events only; the backend decides when to alert.\nReturn only JSON matching the supplied schema.",
+                "source_available_seconds": 24.266666666666666,
+                "output": {
+                  "barking": {
+                    "detected": false,
+                    "evidence": "No repetitive dog bark bouts heard across 0-24.27s; audio contains human speech/shouting and loud crashing/banging/clattering sounds but no canine bark vocalizations.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 6.984896457986906,
+                "usage": {
+                  "completion_tokens": 978,
+                  "prompt_tokens": 496,
+                  "total_tokens": 1474,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": null,
+                    "audio_tokens": null,
+                    "reasoning_tokens": 880,
+                    "rejected_prediction_tokens": null,
+                    "text_tokens": null
+                  },
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cache_write_tokens": null,
+                    "cached_tokens": 99,
+                    "image_tokens": null,
+                    "text_tokens": null
+                  },
+                  "input_tokens": 496,
+                  "output_tokens": 978
+                },
+                "upload_seconds": 0,
+                "upload_cleanup": "not_required_inline",
+                "cleanup_seconds": null,
+                "result_ready_seconds": null,
+                "cleanup_error": null,
+                "file_id": null,
+                "finished_after_run_seconds": 7.532383041980211,
+                "processing_seconds": 6.987793915963266,
+                "finished_at": "2026-11-02T08:30:46.253850+00:00",
+                "cleanup_finished_after_run_seconds": 7.532393041998148
+              },
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "a7173b26038abb1fe0fe6371e8a35d8b0ecb91f9e6cec9375cc9388c4aad748e",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 24.266471354 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 24.266471354.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 24.266666666666666,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "No pet or container with liquid and no lapping behavior is visible in the outdoor or smoke-filled porch views.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No pet taking food into mouth or chewing is visible throughout the video.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "No pet biting or chewing furniture or upholstery is visible; scenes show vehicles, house smoke, and firefighters on a porch.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [
+                    {
+                      "evidence": "Thick dark gray and white smoke rises from the house on the left and spreads across the yard from the start, then dense smoke engulfs the porch camera view while firefighters move through it carrying a wire crate. The volume and darkness of smoke and its spread over the property indicates an uncontrolled house fire endangering the home and occupants.",
+                      "evidence_timestamp": 2.0,
+                      "id": null,
+                      "intervals": [
+                        {
+                          "end": 24.26,
+                          "start": 0
+                        }
+                      ],
+                      "kind": "fire",
+                      "object_bbox": [
+                        170,
+                        200,
+                        460,
+                        350
+                      ],
+                      "object_segmentation_prompt": "distant white house",
+                      "pet_bbox": null,
+                      "pet_segmentation_prompt": null,
+                      "subject": "house and surrounding yard and porch area",
+                      "target": "house fire producing heavy dark smoke",
+                      "title": "House on fire with heavy smoke spreading across property"
+                    }
+                  ],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask and no pet mouthing or carrying such an object is visible.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "No dog standing or balancing upright on hind legs with both front paws off ground is visible.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 16.061719624965917,
+                "usage": {
+                  "input_tokens": 7581,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 2503,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1933
+                  },
+                  "total_tokens": 10084
+                },
+                "upload_seconds": 5.781282166019082,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 4.399625833029859,
+                "result_ready_seconds": 21.849141207989305,
+                "cleanup_error": null,
+                "file_id": "file-2284868705417551",
+                "finished_after_run_seconds": 22.384639208961744,
+                "processing_seconds": 21.850209292024374,
+                "finished_at": "2026-11-02T08:31:01.106100+00:00",
+                "cleanup_finished_after_run_seconds": 26.78872800001409
+              }
+            ],
+            "event_errors": {},
+            "event_finished_after_run_seconds": {
+              "barking": 7.532383041980211,
+              "drinking": 22.384639208961744,
+              "eating": 22.384639208961744,
+              "playing_with_mask": 22.384639208961744,
+              "furniture_chewing": 22.384639208961744,
+              "standing_on_hind_legs": 22.384639208961744
+            },
+            "safety_finished_after_run_seconds": 22.384639208961744,
+            "checks_finished": 2,
+            "checks_total": 2,
+            "audio_available": true,
+            "error": null,
+            "source_available_seconds": 24.266666666666666,
+            "finished_after_run_seconds": 26.79086470900802
+          }
+        }
+      ],
+      "total_seconds": 26.8
+    },
+    {
+      "clip_id": "03_pet_trapped",
+      "status": "completed",
+      "windows": [
+        {
+          "window": {
+            "id": "0000",
+            "index": 0,
+            "requested_start_seconds": 0.0,
+            "requested_end_seconds": 52.1,
+            "start_seconds": 0.0,
+            "end_seconds": 52.1,
+            "input_duration_seconds": 52.1,
+            "source_start_frame": 0,
+            "source_end_frame_exclusive": 2605,
+            "reasoning_effort": "medium",
+            "audio_model": "muse-spark-1.2-contributor",
+            "audio_reasoning_effort": "medium",
+            "safety": {
+              "enabled": true,
+              "known_hazards": [],
+              "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+              "safety_exclusions": ""
+            },
+            "file": "windows/0000/clip.mp4",
+            "sha256": "8f3c0a7fc1e1677b3a0c4729ed192f5c3a387c55bc662188d62c85596128f033",
+            "frame_count": 2605
+          },
+          "record": {
+            "status": "completed",
+            "output": {
+              "barking": {
+                "detected": false,
+                "evidence": "No audible bout of repeated dog barks detected across the full 52.1s recording.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "drinking": {
+                "detected": false,
+                "evidence": "No drinking observed; white dog is stuck in fence or being rescued, no sustained lapping from a container visible.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "eating": {
+                "detected": false,
+                "evidence": "No eating observed; dog does not take food into mouth or chew, only stuck in fence and rescued.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "furniture_chewing": {
+                "detected": false,
+                "evidence": "No furniture chewing observed; dog's mouth contacts fence bars while trapped, no furniture biting or pulling.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "hazards": [
+                {
+                  "evidence": "White dog Babi is firmly wedged with head/body between vertical bars of black pool fence, struggling and unable to free itself until inspector pries bars apart and lifts it out. Entrapment risks strangulation, pressure injury and distress.",
+                  "evidence_timestamp": 25.5,
+                  "id": null,
+                  "intervals": [
+                    {
+                      "end": 8.5,
+                      "start": 5.0
+                    },
+                    {
+                      "end": 32.5,
+                      "start": 17.5
+                    }
+                  ],
+                  "kind": "entanglement",
+                  "object_bbox": [
+                    350,
+                    280,
+                    700,
+                    950
+                  ],
+                  "object_segmentation_prompt": "black metal pool fence",
+                  "pet_bbox": [
+                    150,
+                    620,
+                    450,
+                    880
+                  ],
+                  "pet_segmentation_prompt": "white dog with black markings",
+                  "subject": "white dog with black markings",
+                  "target": "black metal pool fence",
+                  "title": "Dog firmly stuck between pool fence bars"
+                }
+              ],
+              "playing_with_mask": {
+                "detected": false,
+                "evidence": "No surgical face mask present or interacted with; dog is trapped in fence, no mouthing or carrying of mask.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              },
+              "standing_on_hind_legs": {
+                "detected": false,
+                "evidence": "Dog never stands upright on hind legs; seen wedged on side/back in fence and later standing on all four legs.",
+                "evidence_timestamp": null,
+                "intervals": [],
+                "object_bbox": null,
+                "object_segmentation_prompt": null,
+                "pet_bbox": null,
+                "pet_segmentation_prompt": null
+              }
+            },
+            "checks": [
+              {
+                "model": "muse-spark-1.2-contributor",
+                "media_kind": "audio",
+                "event_ids": [
+                  "barking"
+                ],
+                "status": "completed",
+                "cache_key": "f0c6210175f644621413d2af004cb6c389a1b40b725b4fea27779edeaaf6d6c4",
+                "prompt": "Listen to the attached audio and check these monitoring events:\n- barking: A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.\n\nFor each event return detected (true or false), evidence (a short explanation),\nand intervals (start/end seconds when the event is audible).\nReturn true when the audible evidence supports the described event, otherwise\nfalse with an empty intervals array. Use the full recording and context.\nTimes are relative to this recording: 0 <= start < end <= 52.100000000 seconds.\nLoudness is relative to the recording, not a calibrated room decibel level.\nBoth pet_segmentation_prompt and object_segmentation_prompt must be null because\nthis input has no image. evidence_timestamp, pet_bbox, and object_bbox must also be null.\nReport events only; the backend decides when to alert.\nReturn only JSON matching the supplied schema.",
+                "source_available_seconds": 52.1,
+                "output": {
+                  "barking": {
+                    "detected": false,
+                    "evidence": "No audible bout of repeated dog barks detected across the full 52.1s recording.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 11.545651749998797,
+                "usage": {
+                  "completion_tokens": 2026,
+                  "prompt_tokens": 844,
+                  "total_tokens": 2870,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": null,
+                    "audio_tokens": null,
+                    "reasoning_tokens": 1946,
+                    "rejected_prediction_tokens": null,
+                    "text_tokens": null
+                  },
+                  "prompt_tokens_details": {
+                    "audio_tokens": null,
+                    "cache_write_tokens": null,
+                    "cached_tokens": 99,
+                    "image_tokens": null,
+                    "text_tokens": null
+                  },
+                  "input_tokens": 844,
+                  "output_tokens": 2026
+                },
+                "upload_seconds": 0,
+                "upload_cleanup": "not_required_inline",
+                "cleanup_seconds": null,
+                "result_ready_seconds": null,
+                "cleanup_error": null,
+                "file_id": null,
+                "finished_after_run_seconds": 14.182286750001367,
+                "processing_seconds": 11.549717834044714,
+                "finished_at": "2026-11-02T08:31:19.767713+00:00",
+                "cleanup_finished_after_run_seconds": 14.182300042011775
+              },
+              {
+                "model": "muse-spark-1.3-contributor",
+                "media_kind": "visual",
+                "event_ids": [
+                  "drinking",
+                  "eating",
+                  "playing_with_mask",
+                  "furniture_chewing",
+                  "standing_on_hind_legs"
+                ],
+                "status": "completed",
+                "cache_key": "539c0a92bdbca6a4468f8196654bfd978f394b1b086c1671f2657fcb43b9e5b1",
+                "prompt": "You are a home and pet-monitoring assistant analyzing video.\nDetermine whether each of these events happens in the attached video:\n- drinking: A pet drinks liquid, including sustained lapping from a container.\n- eating: A pet eats food, including taking food into its mouth and chewing.\n- playing_with_mask: A pet mouths, carries, paws at, or tugs a surgical face mask.\n- furniture_chewing: A pet bites, chews, or pulls furniture or its upholstery with its mouth.\n- standing_on_hind_legs: A dog stands or balances upright on its hind legs, with both front paws off the ground.\n\nUse the full video sequence and context to make a yes/no decision for each event.\nReturn detected=true if the event happens. If there is not enough evidence to\nsupport yes, return detected=false. Identify pets and objects from the footage.\n\nFor each event return:\n- detected: true or false.\n- intervals: matching start/end times in seconds; use an empty array for false.\n- evidence: a brief explanation of the decision.\n\nThe video runs from 0 to 52.100000000 seconds. Use playback seconds relative to\nthis attachment, not any date/time printed in the footage. Every interval must\nsatisfy 0 <= start < end <= 52.100000000.\n\nReport detections only. The backend decides whether to trigger an alert.\nReturn only JSON matching the supplied schema.\nSafety watch is enabled for pets, people, and the home. A pet does not need to be visible for a household hazard.\nExamine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.\n\nReturn hazards as a list in the hazards field; use [] when none is supported.\n\nEach hazard needs kind, subject (the affected pet, person, or household area,\n<=120 characters), target (the object\nor source of risk, <=160 characters), a specific title (<=120 characters),\nevidence (<=1000 characters), and clip-relative intervals. Distinguish\ndifferent pets, people, household areas and objects with concise, stable visual descriptions. Report at\nmost 20 hazards. Each description must stay under 1000 characters.\nFor a hazard matching one below, reuse its id, kind, subject and target EXACTLY,\neven when the title or explanation changes. Otherwise set id=null. Do not merge\ndifferent subjects, locations, objects or kinds of danger. A continuing hazard is the same\nidentity across windows; a changed title does not create a new hazard.\nKnown hazards (identity references, not proof they occur in this clip):\n[]\nFor each event and hazard also return pet_segmentation_prompt and\nobject_segmentation_prompt. These locate the pet and relevant hazard or event\nobject in ONE evidence image. Each is a short, concrete noun phrase naming one\nconcept, with visible color/type attributes to distinguish the intended target.\nDo not include actions, commands, relationships, lists or claims of danger.\nUse null when a distinct visible target cannot be named; do not invent an\nobject for an off-screen hazard, illness or smoke. For detected=false, both\nprompts must be null.\nFor a household hazard with no visible pet, pet_segmentation_prompt must be\nnull. Name a concrete visible source or affected object when available, such as\nan outlet or sofa. If no suitable object is visible, both prompts may be null;\nthe original evidence frame will still be shown. Never invent a pet or object\njust to produce a segmentation prompt.\n\nFor every event and hazard, also return evidence_timestamp, pet_bbox, and\nobject_bbox. Choose ONE representative frame inside that detection's intervals;\nevidence_timestamp is its playback time in seconds relative to this attachment.\nLocate the pet involved in pet_bbox and the relevant object or source of danger\nin object_bbox, both in THAT SAME FRAME. Boxes are [x_min, y_min, x_max, y_max]\non a normalized 0–1000 grid: origin at the top-left, x increasing rightward,\ny increasing downward. Use tight boxes around the visible targets, with\nx_min < x_max and y_min < y_max. These are object locations, not an outline of\nthe entire event or its motion path. Identify targets from the footage; no\nspecific pet, object, color, or position is assumed in advance.\nUse null for each target that cannot be visually located. Do not invent a pet\nfor a household hazard. Audio-only or off-screen detections need null boxes.\nFor audio-only events, or detected=false, all three fields must be null. When\nneither target is visible, evidence_timestamp may also be null. Never return\nboxes for different frames under the same evidence_timestamp.\n\nInput supplied: visual.\nFor each event, use only its assigned inputs. Audio events require audible evidence; never infer sound from mouth movements. Visual events must ignore sound. For Visual + Audio events evaluate the complete description, preserving AND, OR, and timing relationships. Loudness is relative to the recording, not a calibrated room sound level.\ndrinking inputs: visual\neating inputs: visual\nplaying_with_mask inputs: visual\nfurniture_chewing inputs: visual\nstanding_on_hind_legs inputs: visual\nSafety Watch uses visual evidence only; ignore sound when reporting hazards.\n",
+                "source_available_seconds": 52.1,
+                "output": {
+                  "drinking": {
+                    "detected": false,
+                    "evidence": "No drinking observed; white dog is stuck in fence or being rescued, no sustained lapping from a container visible.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "eating": {
+                    "detected": false,
+                    "evidence": "No eating observed; dog does not take food into mouth or chew, only stuck in fence and rescued.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "furniture_chewing": {
+                    "detected": false,
+                    "evidence": "No furniture chewing observed; dog's mouth contacts fence bars while trapped, no furniture biting or pulling.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "hazards": [
+                    {
+                      "evidence": "White dog Babi is firmly wedged with head/body between vertical bars of black pool fence, struggling and unable to free itself until inspector pries bars apart and lifts it out. Entrapment risks strangulation, pressure injury and distress.",
+                      "evidence_timestamp": 25.5,
+                      "id": null,
+                      "intervals": [
+                        {
+                          "end": 8.5,
+                          "start": 5.0
+                        },
+                        {
+                          "end": 32.5,
+                          "start": 17.5
+                        }
+                      ],
+                      "kind": "entanglement",
+                      "object_bbox": [
+                        350,
+                        280,
+                        700,
+                        950
+                      ],
+                      "object_segmentation_prompt": "black metal pool fence",
+                      "pet_bbox": [
+                        150,
+                        620,
+                        450,
+                        880
+                      ],
+                      "pet_segmentation_prompt": "white dog with black markings",
+                      "subject": "white dog with black markings",
+                      "target": "black metal pool fence",
+                      "title": "Dog firmly stuck between pool fence bars"
+                    }
+                  ],
+                  "playing_with_mask": {
+                    "detected": false,
+                    "evidence": "No surgical face mask present or interacted with; dog is trapped in fence, no mouthing or carrying of mask.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  },
+                  "standing_on_hind_legs": {
+                    "detected": false,
+                    "evidence": "Dog never stands upright on hind legs; seen wedged on side/back in fence and later standing on all four legs.",
+                    "evidence_timestamp": null,
+                    "intervals": [],
+                    "object_bbox": null,
+                    "object_segmentation_prompt": null,
+                    "pet_bbox": null,
+                    "pet_segmentation_prompt": null
+                  }
+                },
+                "error": null,
+                "inference_seconds": 12.822880833002273,
+                "usage": {
+                  "input_tokens": 14861,
+                  "input_tokens_details": {
+                    "cache_write_tokens": null,
+                    "cached_tokens": 0
+                  },
+                  "output_tokens": 2242,
+                  "output_tokens_details": {
+                    "reasoning_tokens": 1653
+                  },
+                  "total_tokens": 17103
+                },
+                "upload_seconds": 25.757207957969513,
+                "upload_cleanup": "deleted",
+                "cleanup_seconds": 4.47945179202361,
+                "result_ready_seconds": 38.58856725000078,
+                "cleanup_error": null,
+                "file_id": "file-1082273130961340",
+                "finished_after_run_seconds": 41.2098124169861,
+                "processing_seconds": 38.58979304198874,
+                "finished_at": "2026-11-02T08:31:46.795228+00:00",
+                "cleanup_finished_after_run_seconds": 45.692908166965935
+              }
+            ],
+            "event_errors": {},
+            "event_finished_after_run_seconds": {
+              "barking": 14.182286750001367,
+              "drinking": 41.2098124169861,
+              "eating": 41.2098124169861,
+              "playing_with_mask": 41.2098124169861,
+              "furniture_chewing": 41.2098124169861,
+              "standing_on_hind_legs": 41.2098124169861
+            },
+            "safety_finished_after_run_seconds": 41.2098124169861,
+            "checks_finished": 2,
+            "checks_total": 2,
+            "audio_available": true,
+            "error": null,
+            "source_available_seconds": 52.1,
+            "finished_after_run_seconds": 45.69543091696687
+          }
+        }
+      ],
+      "total_seconds": 45.706
+    }
+  ],
+  "finished_at": "2026-11-02T08:31:51.298293+00:00",
+  "revisions": [
+    {
+      "at": "2026-11-02T09:11:08.218502+00:00",
+      "type": "visual_rerun",
+      "clip_id": "06_furniture_chewing",
+      "old_description": "A pet bites, chews, or pulls furniture or its upholstery with its mouth.",
+      "new_description": "Alert when the pet is biting, chewing, or pulling on furniture. Biting and chewing involve the mouth, while pulling counts whether done with the mouth or paws. Resting at the same time still counts if any of biting, chewing, or pulling is happening.",
+      "note": "After an initial missed detection, the furniture event definition was expanded to clarify biting, chewing, pulling with the mouth or paws, and concurrent resting. A visual rerun detected chewing at 0–10s. The remaining visual events, Safety Watch instructions, silent input, model and reasoning settings were unchanged. The original audio check was retained, so this clip combines separate inference runs and is excluded from aggregate latency."
+    },
+    {
+      "at": "2026-11-02T09:11:08.218502+00:00",
+      "type": "excluded_clip",
+      "clip_id": "dog_eating_8056266",
+      "note": "The eating-at-bowl recording was excluded after the initial evaluation because obscured bowl contents prevented reliable annotation of eating versus drinking. Labels for the remaining clips were unchanged."
+    }
+  ]
+}

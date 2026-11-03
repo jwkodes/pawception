@@ -1,0 +1,26 @@
+{
+  "type": "json_schema",
+  "name": "event_inputs",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "resolved_mode": {
+        "type": "string",
+        "enum": [
+          "visual",
+          "audio",
+          "both"
+        ]
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "resolved_mode",
+      "reason"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ed">
+    <title>
+      Pawception · Your monitor
+    </title>
+    <link rel="stylesheet" href="/monitor.css">
+    <script src="/webcam.js" defer></script>
+    <script src="/activity-review.js" defer></script>
+    <script src="/event-suggestions.js" defer></script>
+    <script src="/monitor.js" defer>
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="/monitor">
+          <img class="brand-mark" src="/pawception-logo.png" alt="" width="44" height="44">
+          pawception
+        </a>
+        <nav class="product-nav" aria-label="Pawception pages">
+          <a class="nav-button selected" href="/monitor" aria-current="page">Monitor</a>
+          <a class="nav-button" href="/offline">Recording analysis</a>
+        </nav>
+        <div class="header-actions">
+          <span class="mock-tag">
+            <i>
+            </i>
+            <span id="mode-label">Mock mode</span>
+          </span>
+          <button id="notifications" class="notification-button" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
+            </svg>
+            <span id="unread" hidden>
+              0
+            </span>
+          </button>
+        </div>
+      </header>
+      <nav class="monitor-view-tabs" aria-label="Monitor view">
+        <button id="setup-nav" class="nav-button selected">Setup</button>
+        <button id="live-nav" class="nav-button" disabled>Live view</button>
+      </nav>
+      <p id="error" class="error" role="alert" hidden>
+      </p>
+      <p id="previous-session" class="error" hidden>
+        <span id="previous-session-message">A previous monitoring session is still running.</span>
+        <button id="stop-previous" class="secondary-button">
+          Stop previous session
+        </button>
+      </p>
+      <main>
+        <section id="setup-view" aria-labelledby="setup-title">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">
+                A LITTLE PEACE OF MIND
+              </p>
+              <h1 id="setup-title">
+                Keep an eye on
+                <br>
+                what matters.
+              </h1>
+              <p class="intro">
+                Their habits. Your concerns. A watchful eye, your way.
+              </p>
+            </div>
+            <div class="demo-note">
+              <span class="tiny-star">
+                ✳
+              </span>
+              <div>
+                <strong>
+                  <span id="mode-note-title">A preview of your pet’s monitor</span>
+                </strong>
+                <p id="mode-note-copy">
+                  Real video. Scripted observations.
+                  <br>
+                  No AI requests or credits used.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="setup-grid">
+            <div class="setup-main">
+              <section class="card safety-watch-card" aria-labelledby="safety-setup-title">
+                <div class="safety-heading">
+                  <div class="safety-title"><span id="safety-setup-icon" class="safety-status-icon" aria-hidden="true">✓</span><h2 id="safety-setup-title">Safety watch</h2></div>
+                  <label class="safety-toggle"><input id="safety-setup" type="checkbox" role="switch" checked aria-label="Safety watch in setup"><span id="safety-setup-state">On</span></label>
+                </div>
+                <p>Watch for danger to pets, people, and your home—including fire, smoke, electrical sparks, and flooding.</p>
+                <p id="safety-setup-help" class="field-help">Alerts on the first detected hazard. Continuing hazards are grouped into one episode.</p>
+                <button id="edit-safety-setup" type="button" class="safety-edit-button" disabled>Edit Safety watch</button>
+              </section>
+              <section class="card events-card">
+                <div class="card-heading">
+                  <div>
+                    <span class="section-number">
+                      01
+                    </span>
+                    <h2>
+                      What should we watch for?
+                    </h2>
+                  </div>
+                  <span id="event-count" class="quiet-label">
+                  </span>
+                </div>
+                <p class="card-intro">
+                  Describe an event in your own words. You can add more while live.
+                </p>
+                <p id="setup-save-status" class="setup-save-status" role="status">Events and settings are saved in this browser.</p>
+                <div id="setup-events" class="event-list">
+                </div>
+                <button id="add-setup-event" class="add-button">
+                  <span>
+                    ＋
+                  </span>
+                  Add an event
+                </button>
+                <details id="removed-events-section" class="removed-events-section" hidden>
+                  <summary>Trash <span id="removed-count" class="quiet-label"></span></summary>
+                  <p class="removed-help">Restore an event with its description and alert duration. Saved in this browser.</p>
+                  <p id="restore-limit" class="removed-help" hidden>Remove an active event to make room. You can watch up to 20 events.</p>
+                  <div id="removed-events"></div>
+                  <button id="empty-trash" type="button" class="secondary-button">Empty trash</button>
+                  <p class="removed-help">Deleting definitions from the trash keeps past alerts and recordings.</p>
+                </details>
+              </section>
+              <details class="card developer-card" open>
+                <summary>
+                  <span>
+                    <span class="section-number">
+                      02
+                    </span>
+                    Developer settings
+                  </span>
+                  <span class="quiet-label">
+                    Fine-tune your monitor
+                  </span>
+                </summary>
+                <div class="developer-body">
+                <div class="mode-switch" role="group" aria-label="Observation mode">
+                  <button id="mode-mock" class="selected" aria-pressed="true">Mock · No API calls</button>
+                  <button id="mode-muse" aria-pressed="false">Muse · Real API calls</button>
+                </div>
+                <p id="mode-help" class="field-help">Scripted observations for testing the interface. No credentials or credits are used.</p>
+                  <div class="field-grid">
+                    <label>
+                      Window length
+                      <span class="input-unit">
+                        <input id="window" type="number" min="1" max="120" step="1" value="60" required>
+                        <span>
+                          sec
+                        </span>
+                      </span>
+                    </label>
+                    <label>
+                      Overlap
+                      <span class="input-unit">
+                        <input id="overlap" type="number" min="0" max="119" step="1" value="0" required>
+                        <span>
+                          sec
+                        </span>
+                      </span>
+                    </label>
+                    <label class="wide">
+                      Event gap tolerance
+                      <span class="input-unit">
+                        <input id="merge-gap" type="number" min="0" max="30" step="0.1" value="1" required aria-describedby="merge-gap-help">
+                        <span>sec</span>
+                      </span>
+                      <span id="merge-gap-help" class="field-help">Join detections separated by this much time or less into one event with one alert. Gaps do not count toward the alert duration. Set 0 to require touching intervals.</span>
+                    </label>
+                    <label class="wide">
+                      Video understanding model
+                      <select id="model" aria-label="Model">
+                        <option value="muse-spark-1.3-contributor">
+                          Muse Spark 1.3 Contributor
+                        </option>
+                        <option value="muse-spark-1.3">
+                          Muse Spark 1.3
+                        </option>
+                        <option value="muse-spark-1.2-contributor">Muse Spark 1.2 Contributor</option>
+                        <option value="muse-spark-1.2">Muse Spark 1.2</option>
+                        <option value="muse-spark-1.1">Muse Spark 1.1</option>
+                      </select>
+                    </label>
+                    <label>
+                      Video reasoning
+                      <select id="video-reasoning" aria-label="Video reasoning"></select>
+                    </label>
+                    <label>
+                      Prompt Polish reasoning
+                      <select id="suggestion-reasoning" aria-label="Prompt Polish reasoning">
+                        <option value="minimal">Minimal</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="xhigh">Extra high</option>
+                      </select>
+                      <span class="field-help">Muse Spark 1.3 Contributor · Applies to the next suggestion.</span>
+                    </label>
+                    <label class="wide">
+                      Audio model
+                      <select id="audio-model" aria-label="Audio model" aria-describedby="audio-model-warning">
+                        <option value="muse-spark-1.2-contributor">Muse Spark 1.2 Contributor</option>
+                        <option value="muse-spark-1.2">Muse Spark 1.2</option>
+                        <option value="muse-spark-1.3-contributor">Muse Spark 1.3 Contributor</option>
+                        <option value="muse-spark-1.3">Muse Spark 1.3</option>
+                        <option value="muse-spark-1.1">Muse Spark 1.1</option>
+                      </select>
+                      <span class="field-help audio-model-warning" id="audio-model-warning" hidden>Spark 1.3 audio understanding is not fully supported by Meta. Spark 1.2 is recommended for audio testing.</span>
+                    </label>
+                    <label>
+                      Audio reasoning
+                      <select id="audio-reasoning" aria-label="Audio reasoning"></select>
+                    </label>
+                    <p class="field-help wide" id="audio-model-help"></p>
+                    <p class="field-help wide">Sound-event accuracy is experimental. Loudness is relative to the recording.</p>
+                    <label class="wide" id="mock-delay-field">
+                      Mock processing time per window
+                      <span class="input-unit">
+                        <input id="mock-delay" type="number" min="0.1" max="300" step="0.1" value="5" required>
+                        <span>
+                          sec
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                <p class="field-help" id="model-help">
+                  Model selection is saved for the session. Mock mode uses scripted observations for every model.
+                  </p>
+                  <div class="buffer-note">
+                    <span aria-hidden="true">
+                      ↳
+                    </span>
+                    <p>
+                      <strong>
+                        Stay close to live.
+                      </strong>
+                      Fixed windows, one processing slot, two waiting slots. If the queue fills, the oldest waiting window is skipped. Active processing is never interrupted.
+                    </p>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <aside class="card source-card">
+              <div class="card-heading">
+                <div>
+                  <span class="section-number">
+                    03
+                  </span>
+                  <h2>
+                    Go live
+                  </h2>
+                </div>
+                <span class="source-dot">
+                </span>
+              </div>
+              <div class="source-switch" aria-label="Source type">
+                <button id="source-replay" class="selected" type="button" aria-pressed="true">
+                  Video replay
+                </button>
+                <button id="source-webcam" type="button" aria-pressed="false">
+                  Webcam
+                </button>
+              </div>
+              <div class="preview-wrap">
+                <video id="preview" muted playsinline preload="metadata" aria-label="Selected video preview">
+                </video>
+                <div id="camera-placeholder" class="camera-placeholder" hidden>Camera is off</div>
+                <div id="preview-label" class="preview-label">
+                  VIDEO SOURCE
+                </div>
+                <span id="source-duration" class="preview-duration">
+                  —
+                </span>
+              </div>
+              <div class="source-description">
+                <strong id="source-name">
+                  Choose your video
+                </strong>
+                <span id="source-detail">
+                  A video file plays once, as a live feed.
+                </span>
+              </div>
+              <div id="video-actions" class="source-actions">
+                <button id="sample" type="button" class="secondary-button" disabled>
+                  Use kitten sample
+                </button>
+                <label class="file-button" for="file">
+                  Choose a video
+                  <span>
+                    ↗
+                  </span>
+                  <input id="file" type="file" accept="video/*">
+                </label>
+              </div>
+              <div id="camera-actions" class="source-actions" hidden>
+                <label class="microphone-choice"><input id="capture-audio" type="checkbox"> Include microphone audio</label>
+                <button id="enable-camera" type="button" class="secondary-button">Enable camera</button>
+              </div>
+              <p class="field-help">
+                <span id="source-privacy">Local files stay in this browser in mock mode. Live replay has no pause or seek controls.</span>
+              </p>
+              <button id="go-live" class="primary-button go-live" disabled>
+                <span class="live-dot">
+                </span>
+                Go live
+                <span class="button-arrow">
+                  ↗
+                </span>
+              </button>
+              <p class="go-live-note">
+                <span id="go-live-note">Webcam access is not requested.</span>
+              </p>
+            </aside>
+          </div>
+        </section>
+        <section id="live-view" aria-labelledby="live-title" hidden>
+          <div class="live-heading">
+            <div>
+              <p class="eyebrow">
+                YOUR MONITOR
+              </p>
+              <h1 id="live-title">
+                A watchful eye.
+              </h1>
+              <p id="live-subtitle" class="intro">
+              </p>
+            </div>
+            <div class="live-actions">
+              <span id="session-status" class="session-pill">
+                Live replay
+              </span>
+              <button id="stop" class="secondary-button">
+                Stop monitoring
+              </button>
+              <button id="back-setup" class="secondary-button" hidden>
+                Back to setup
+              </button>
+            </div>
+          </div>
+          <div class="live-grid">
+            <div>
+              <section class="card live-player">
+                <div class="video-wrap">
+                  <video id="live-video" muted playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-label="Live replay video">
+                  </video>
+                  <div class="video-topline">
+                    <span class="video-badge">
+                      <i>
+                      </i>
+                      <span id="video-status">
+                        LIVE REPLAY
+                      </span>
+                    </span>
+                    <span class="mock-video-badge" id="observation-badge">
+                      MOCK OBSERVATIONS
+                    </span>
+                  </div>
+                  <div class="video-bottomline">
+                    <span id="live-source">
+                    </span>
+                    <span id="live-clock">
+                      00:00
+                    </span>
+                  </div>
+                  <button id="resume-video" class="resume-video" hidden>
+                    Reconnect playback
+                  </button>
+                </div>
+                <div class="video-caption">
+                  <span>
+                    <i class="source-dot">
+                    </i>
+                    Continuous playback · 1×
+                  </span>
+                  <span>
+                    No seeking while live
+                  </span>
+                </div>
+              </section>
+              <section class="card pipeline-card" aria-label="Processing status">
+                <div class="card-heading">
+                  <div>
+                    <span class="section-number">
+                      ↳
+                    </span>
+                    <h2 id="processing-title">
+                      Collecting footage
+                    </h2>
+                  </div>
+                  <span id="queue-count" class="quiet-label">
+                  </span>
+                </div>
+                <div class="pipeline-stats">
+                  <div>
+                    <span>
+                      Live position
+                    </span>
+                    <strong id="captured">
+                      00:00
+                    </strong>
+                  </div>
+                  <div>
+                    <span>
+                      Last finished window
+                    </span>
+                    <strong id="analyzed">
+                      —
+                    </strong>
+                  </div>
+                  <div>
+                    <span>
+                      Analysis lag
+                    </span>
+                    <strong id="lag">
+                      0s
+                    </strong>
+                  </div>
+                </div>
+                <div class="collection">
+                  <div>
+                    <span id="buffer-label">
+                      Filling the next window
+                    </span>
+                    <span id="buffer-detail">
+                    </span>
+                  </div>
+                  <progress id="buffer-progress" max="1" value="0" aria-label="Window collection progress">
+                  </progress>
+                </div>
+                <div id="processing-detail" class="processing-detail">
+                </div>
+                <div id="skipped-warning" class="skipped-warning" hidden>
+                </div>
+                <p id="inference-errors" class="inference-errors" role="status" hidden></p>
+              </section>
+            </div>
+            <aside class="card live-events-card">
+              <section class="safety-live" aria-labelledby="safety-live-title">
+                <div class="safety-heading">
+                  <div class="safety-title"><span id="safety-live-icon" class="safety-status-icon" aria-hidden="true">✓</span><h2 id="safety-live-title">Safety watch</h2></div>
+                  <label class="safety-toggle"><input id="safety-live" type="checkbox" role="switch" aria-label="Safety watch in live view"><span id="safety-live-state">On</span></label>
+                </div>
+                <p id="safety-live-help" class="field-help"></p>
+                <button id="edit-safety-live" type="button" class="safety-edit-button" disabled>Edit Safety watch</button>
+              </section>
+              <div class="card-heading">
+                <div>
+                  <span class="section-number">
+                    ◎
+                  </span>
+                  <h2>
+                    Watching for
+                  </h2>
+                </div>
+                <span id="live-event-count" class="quiet-label">
+                </span>
+              </div>
+              <div id="live-events" class="event-list">
+              </div>
+              <button id="add-live-event" class="add-button">
+                <span>
+                  ＋
+                </span>
+                Add an event
+              </button>
+              <p class="live-events-note">
+                New events join the next inference request. Earlier footage won’t trigger retroactive alerts.
+              </p>
+            </aside>
+          </div>
+          <section id="activity-review" class="card activity-review" aria-labelledby="review-title">
+            <div class="card-heading">
+              <div><span class="section-number">↔</span><h2 id="review-title">Activity review</h2></div>
+              <span class="quiet-label">Hover to preview · Click to play · Live feed stays live</span>
+            </div>
+            <div class="review-workspace">
+              <div class="review-screen">
+                <video id="review-video" muted playsinline preload="metadata" aria-label="Activity review video"></video>
+                <span class="review-video-label">REVIEW</span>
+                <span id="review-video-time" class="review-video-time">00:00</span>
+              </div>
+              <div class="review-context">
+                <p class="eyebrow">THE MOMENTS AROUND IT</p>
+                <h3 id="review-context-title">A little more context.</h3>
+                <p id="review-context-copy">Move along the filmstrip to preview a frame. Click anywhere in captured footage to review what happened before or after an activity.</p>
+                <div id="review-context-event"></div>
+                <p class="field-help">Highlighted activities are scripted mock observations. Viewing the timeline does not mark an alert as viewed.</p>
+              </div>
+            </div>
+            <div class="review-controls">
+              <button id="review-play" class="review-play" aria-label="Play review" disabled>▶</button>
+              <button id="review-sound" class="secondary-button review-sound-toggle" type="button" aria-label="Unmute review audio"></button>
+              <span id="review-position">00:00</span>
+              <input id="review-scrubber" type="range" min="0" max="0" step="0.05" value="0" aria-label="Review position" disabled>
+              <span id="review-available">00:00 captured</span>
+            </div>
+            <div id="review-timeline" class="review-timeline" aria-label="Activity timeline"></div>
+            <div class="processing-legend"><span><i class="processed"></i>Processed</span><span><i class="running"></i>Processing</span><span><i class="pending"></i>Queued</span><span><i class="skipped"></i>Skipped</span><span><i class="failed"></i>Failed</span></div>
+            <div class="review-legend"><span><i class="legend-danger"></i>Safety hazard</span><span><i class="legend-activity"></i>Detected activity</span><span><i class="legend-unread"></i>Unread alert</span><span><i class="legend-viewed"></i>Viewed alert</span><span><i class="legend-partial"></i>Partly checked</span><span><i class="legend-skipped"></i>Skipped analysis window</span><span><i class="legend-future"></i>Not captured yet</span></div>
+          </section>
+          <section class="alerts-section">
+            <div class="alerts-heading">
+              <h2>
+                Recent alerts
+                <span id="alert-count" class="count-badge">
+                  0
+                </span>
+              </h2>
+              <span>
+                Click an alert to review the evidence
+              </span>
+            </div>
+            <div id="alert-feed" class="alert-feed">
+            </div>
+          </section>
+        </section>
+      </main>
+      <footer>
+        <span class="footer-brand">
+          pawception
+        </span>
+        <span>
+          A little more peace of mind.
+        </span>
+        <a href="/#pipeline">
+          Open developer lab ↗
+        </a>
+      </footer>
+    </div>
+    <dialog id="event-dialog" class="event-dialog" aria-labelledby="event-dialog-title">
+      <form id="event-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">
+              PERSONALIZE YOUR MONITOR
+            </p>
+            <h2 id="event-dialog-title">
+              One more thing to watch.
+            </h2>
+          </div>
+          <button type="button" class="icon-button" data-close="event-dialog" aria-label="Close event form">
+            ×
+          </button>
+        </div>
+        <div id="event-editor">
+        <label>
+          Event name
+          <input id="event-name" maxlength="80" required placeholder="Chewing the sofa">
+        </label>
+        <label>
+          What should we look for?
+          <textarea id="event-description" maxlength="1000" rows="4" required placeholder="A pet biting, chewing, or forcefully pulling furniture or cushions.">
+          </textarea>
+        </label>
+        <label>
+          Check using
+          <select id="event-input-mode" class="event-routing-select" aria-label="Event inputs">
+            <option value="auto">Auto · Smart Routing</option>
+            <option value="visual">Visual</option>
+            <option value="audio">Audio</option>
+            <option value="both">Visual + Audio</option>
+          </select>
+          <span class="field-help">Smart Routing uses Muse Spark in Auto mode to choose Visual, Audio, or Visual + Audio when you add the event. Visual + Audio uses the audio model with both inputs.</span>
+        </label>
+        <div class="suggestion-action">
+          <button id="suggest-description" title="Suggest three clearer versions of your full event description" type="button" class="secondary-button">Prompt Polish</button>
+          <span id="suggestion-cost" class="field-help"></span>
+        </div>
+        <label>
+          Alert duration threshold
+          <span class="input-unit">
+            <input id="event-threshold" type="number" min="0.1" max="600" step="0.1" value="5" required>
+            <span>
+              sec
+            </span>
+          </span>
+          <span class="field-help">Alert once an event accumulates this much detected activity within a merged episode.</span>
+        </label>
+        <p id="event-help" class="field-help">
+        </p>
+        </div>
+        <p id="suggestion-status" class="field-help" role="status" aria-live="polite" hidden></p>
+        <section id="event-suggestions" aria-label="Suggested event descriptions" hidden>
+          <p class="suggestion-intro">Prompt Polish suggests three clearer versions of your full event. Choose one to keep editing before adding it.</p>
+          <div id="suggestion-options" class="suggestion-options"></div>
+          <button id="reject-suggestions" class="keep-wording" type="button">Keep my wording</button>
+        </section>
+        <p id="event-error" role="alert" class="form-error" hidden>
+        </p>
+        <button id="save-event" class="primary-button" type="submit">
+          Add event
+          <span>
+            ＋
+          </span>
+        </button>
+      </form>
+    </dialog>
+    <dialog id="safety-dialog" class="event-dialog safety-dialog" aria-labelledby="safety-dialog-title">
+      <form id="safety-form">
+        <div class="dialog-heading">
+          <div><p class="eyebrow">PERSONALIZE SAFETY WATCH</p><h2 id="safety-dialog-title">What counts as danger?</h2></div>
+          <button type="button" class="icon-button" data-close="safety-dialog" aria-label="Close Safety watch editor">×</button>
+        </div>
+        <p id="safety-edit-help" class="field-help"></p>
+        <label>Hazard prompt
+          <textarea id="hazard-prompt" rows="8" maxlength="6000" required></textarea>
+        </label>
+        <label>Exclusions <span class="quiet-label">Optional</span>
+          <textarea id="hazard-exclusions" rows="3" maxlength="2000" placeholder="For example: Ignore chewing the designated training cushion."></textarea>
+        </label>
+        <p class="field-help">Exclusions tell Muse which situations to leave out of Safety watch. Your custom events are checked separately. Output format and hazard grouping are handled automatically.</p>
+        <p id="safety-mock-help" class="field-help" hidden>Mock mode uses scripted hazards. These instructions are used for real Muse inference.</p>
+        <div class="safety-restore"><button id="restore-safety" type="button" class="keep-wording">Restore defaults</button><span class="field-help">Resets the prompt and clears exclusions. Save to apply.</span></div>
+        <p id="safety-edit-error" role="alert" class="form-error" hidden></p>
+        <div class="safety-editor-actions">
+          <button type="button" class="secondary-button" data-close="safety-dialog">Cancel</button>
+          <button id="save-safety" type="submit" class="primary-button">Save changes</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="alerts-dialog" class="alerts-dialog" aria-labelledby="alerts-dialog-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">
+            YOUR ALERTS
+          </p>
+          <h2 id="alerts-dialog-title">
+            A moment worth a look.
+          </h2>
+        </div>
+        <button type="button" class="icon-button" data-close="alerts-dialog" aria-label="Close notifications">
+          ×
+        </button>
+      </div>
+      <div id="alert-detail">
+      </div>
+    </dialog>
+    <div id="toasts" class="toasts" role="status" aria-live="polite">
+    </div>
+  </body>
+</html>

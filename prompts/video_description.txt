@@ -1,0 +1,12 @@
+Describe what visibly happens in this video in chronological order.
+Identify the animals, objects they interact with, and the actions you can see.
+Give approximate timestamps in seconds from the beginning of this clip for key events.
+Distinguish clear observations from uncertain interpretations. Say when an object or
+action cannot be identified reliably. Do not infer events outside this video, medical
+conditions, or an animal's intentions. Do not assume that play is aggression.
+
+Organize your answer into:
+1. A brief summary.
+2. Animals and relevant objects.
+3. A chronological list of observed actions with approximate timestamps.
+4. Uncertainties and details that need a closer look.

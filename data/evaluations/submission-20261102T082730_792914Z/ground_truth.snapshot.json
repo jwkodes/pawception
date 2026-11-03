@@ -1,0 +1,958 @@
+{
+  "schema_version": 1,
+  "dataset_id": "pawception_submission_eval",
+  "version": "1.0.0",
+  "revision": 11,
+  "annotation_policy": [
+    "Every clip/event pair begins unreviewed. Suggested focus labels are proposals, not observations.",
+    "No model predictions are shown or used to create ground truth. Inference is not started by this UI.",
+    "Observed events need source-video time intervals; separate visits/bouts use separate intervals.",
+    "Not observed is an explicit reviewed negative. Cannot tell is excluded from accuracy, never scored as a negative.",
+    "Barking requires audible evidence. If the recording has no usable audio, mark it unassessable.",
+    "These clips have been used during development. This is a small development benchmark, not a held-out test or a broad safety validation.",
+    "Safety Watch is evaluated separately from custom-event routing; do not use the expected hazard label in the model prompt."
+  ],
+  "behaviors": {
+    "drinking": "A pet drinks liquid, including sustained lapping from a container.",
+    "eating": "A pet eats food, including taking food into its mouth and chewing.",
+    "playing_with_mask": "A pet mouths, carries, paws at, or tugs a surgical face mask.",
+    "furniture_chewing": "A pet bites, chews, or pulls furniture or its upholstery with its mouth.",
+    "barking": "A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.",
+    "standing_on_hind_legs": "A dog stands or balances upright on its hind legs, with both front paws off the ground.",
+    "danger": "A visible dangerous interaction or circumstance threatens a pet, person, or the home, consistent with Safety Watch. Mere object presence, ordinary furniture chewing, and normal play are not automatically danger."
+  },
+  "behavior_titles": {
+    "drinking": "Drinking",
+    "eating": "Eating",
+    "playing_with_mask": "Interacting with a mask",
+    "furniture_chewing": "Biting, chewing or pulling furniture",
+    "barking": "Repeated barking",
+    "standing_on_hind_legs": "Standing on hind legs",
+    "danger": "Safety Watch: visible danger"
+  },
+  "behavior_modes": {
+    "drinking": "visual",
+    "eating": "visual",
+    "playing_with_mask": "visual",
+    "furniture_chewing": "visual",
+    "barking": "audio",
+    "standing_on_hind_legs": "visual",
+    "danger": "visual"
+  },
+  "behavior_types": {
+    "drinking": "custom",
+    "eating": "custom",
+    "playing_with_mask": "custom",
+    "furniture_chewing": "custom",
+    "barking": "custom",
+    "standing_on_hind_legs": "custom",
+    "danger": "safety_watch"
+  },
+  "safety_prompt": "Examine the entire scene for visible danger to pets, people, or the home, including hazards the owner has not explicitly named.\nNo pet or person needs to be visible: report supported household dangers even in an empty room. Examples include uncontrolled fire, smoke spreading through a room, electrical sparks, or leaking water spreading across a floor. Also watch for dangerous pet or person interactions such as chewing an electrical cable, becoming tangled in a cord, ingesting a dangerous object, or approaching an active heat source.\nReport concrete dangerous interactions or circumstances with visible evidence, not hypothetical risks from an object's mere presence. Distinguish smoke from ordinary steam, and uncontrolled fire from a normally contained flame such as a candle or fireplace. Do not flag ordinary cooking, contained flames, or water in a sink merely because they are present; report visible evidence of a dangerous situation.\nOrdinary furniture chewing, normal play, and calm behavior are not automatically hazards. Do not diagnose medical issues or assume an unidentified substance or plant is toxic.\nReport the same incident once: when smoke accompanies a visible fire, report the fire and describe the smoke in its evidence instead of duplicating it as a smoke hazard.\nExplain what is visible and why it may be dangerous; do not claim harm or ingestion without evidence. Use kind=other for supported hazards outside the listed categories.",
+  "scoring": {
+    "interval_iou_threshold": 0.5,
+    "minimum_accuracy": 1.0,
+    "boundary_tolerance_seconds": 0.5
+  },
+  "clips": [
+    {
+      "id": "dog_drinking_8056538",
+      "title": "Dog at a bowl — drinking candidate",
+      "duration_seconds": 7.2,
+      "fps": 25.0,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "videos/dog_drinking_8056538.mp4",
+          "sha256": "a3449e23ac60f2b4ce74cc9d18a9c81056445edf2b568487983dc04b288a2386"
+        }
+      ],
+      "suggested_events": [
+        "drinking",
+        "danger"
+      ],
+      "credit": {
+        "source_url": "https://www.pexels.com/video/video-of-a-dog-drinking-water-8056538/",
+        "creator": "Kampus Production",
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 2,
+      "has_audio": false,
+      "annotations": {
+        "drinking": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 7.2
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        },
+        "barking": {
+          "label": "unassessable",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        },
+        "danger": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:14:07.853853+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:14:07.853853+00:00"
+    },
+    {
+      "id": "dog_eating_8056266",
+      "title": "Dog at a bowl — eating candidate",
+      "duration_seconds": 9.68,
+      "fps": 25.0,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "videos/dog_eating_8056266.mp4",
+          "sha256": "b0c1f9c36ac0cefe3948285f7ecee88c72dc8e37a1b7b4f66ca08f7bbc1d453c"
+        }
+      ],
+      "suggested_events": [
+        "eating",
+        "danger"
+      ],
+      "credit": {
+        "source_url": "https://www.pexels.com/video/dog-eating-on-the-bowl-8056266/",
+        "creator": "Kampus Production",
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/"
+      },
+      "enabled": false,
+      "annotation_status": "excluded",
+      "annotation_revision": 2,
+      "has_audio": false,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        },
+        "eating": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 9.68
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        },
+        "barking": {
+          "label": "unassessable",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        },
+        "danger": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:15:05.220872+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:59:01.624450+00:00",
+      "exclusion_reason": "Excluded at user request after reviewing initial evaluation: bowl contents are not visible, so eating versus drinking cannot be established fairly."
+    },
+    {
+      "id": "dog_playing_with_mask_8056264",
+      "title": "Dog interacting with a surgical mask",
+      "duration_seconds": 12.68,
+      "fps": 25.0,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "videos/dog_playing_with_mask_8056264.mp4",
+          "sha256": "beca1bdb469c10e1dad4d0c87ec89bf11391167d5aad2a2553e2e6edb6495d3d"
+        }
+      ],
+      "suggested_events": [
+        "playing_with_mask",
+        "danger"
+      ],
+      "credit": {
+        "source_url": "https://www.pexels.com/video/dog-playing-with-the-face-mask-8056264/",
+        "creator": "Kampus Production",
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": false,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        },
+        "playing_with_mask": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 8.625534
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        },
+        "barking": {
+          "label": "unassessable",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        },
+        "danger": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 8.625534
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Manually reviewed against the source video.",
+          "reviewed_at": "2026-11-02T08:16:58.736479+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:16:58.736479+00:00"
+    },
+    {
+      "id": "06_furniture_chewing",
+      "title": "Dog chewing wooden furniture",
+      "duration_seconds": 14.881533333333334,
+      "fps": 29.97002997002997,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "demo/generated/online/06_furniture_chewing.mp4",
+          "sha256": "6ce70e91603647cbcf94f4b071786893c8cc183645aced3810ef8c69999b615b"
+        }
+      ],
+      "suggested_events": [
+        "furniture_chewing",
+        "danger"
+      ],
+      "credit": {
+        "creator": "Furbo Pet Camera",
+        "source_url": "https://www.youtube.com/watch?v=SxTn8YjeTGE",
+        "license": "CC BY",
+        "license_url": "https://www.youtube.com/t/creative_commons"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": true,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        },
+        "furniture_chewing": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 14.225348
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        },
+        "barking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        },
+        "danger": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:17:59.051000+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:17:59.051000+00:00"
+    },
+    {
+      "id": "04_intensive_barking",
+      "title": "Repeated, clearly audible barking",
+      "duration_seconds": 19.1191,
+      "fps": 29.97002997002997,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "demo/generated/online/04_intensive_barking.mp4",
+          "sha256": "ad64a63cd74de83b2487424d6752f34a344f9177d6bed96e39bff7d1017a04b8"
+        }
+      ],
+      "suggested_events": [
+        "barking",
+        "danger"
+      ],
+      "credit": {
+        "creator": "ChannelCro - Stock Footage",
+        "source_url": "https://www.youtube.com/watch?v=5OjbMgvwJCg",
+        "license": "CC BY",
+        "license_url": "https://www.youtube.com/t/creative_commons"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": true,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        },
+        "barking": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 19.1191
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        },
+        "danger": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:18:59.286334+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:18:59.286334+00:00"
+    },
+    {
+      "id": "05_hind_legs",
+      "title": "Dog standing upright on its hind legs",
+      "duration_seconds": 10.01,
+      "fps": 23.976023976023978,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "demo/generated/online/05_hind_legs.mp4",
+          "sha256": "94f6c13fc6da4aca42ba32fdd6293dca0a84bb931a400111b4d1197f4dd3b0f0"
+        }
+      ],
+      "suggested_events": [
+        "standing_on_hind_legs",
+        "danger"
+      ],
+      "credit": {
+        "creator": "Sam Lion",
+        "source_url": "https://www.pexels.com/video/two-dogs-playing-around-5728455/",
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": true,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        },
+        "barking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 2.987738
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        },
+        "danger": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:19:47.520430+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:19:47.520430+00:00"
+    },
+    {
+      "id": "01_cat_in_can",
+      "title": "Cat with head trapped in a food can",
+      "duration_seconds": 15.633333333333333,
+      "fps": 30.0,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "demo/generated/online/01_cat_in_can.mp4",
+          "sha256": "dcd61b2a1e461ec09875d32c88912795f2e76c3eed72f4f7d5f13b7424a48601"
+        }
+      ],
+      "suggested_events": [
+        "danger"
+      ],
+      "credit": {
+        "creator": "Shop with Me Mama",
+        "source_url": "https://www.youtube.com/watch?v=rdxUbjgg1Lw",
+        "license": "CC BY",
+        "license_url": "https://www.youtube.com/t/creative_commons"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": true,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        },
+        "barking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        },
+        "danger": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 13.136032
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:20:22.844239+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:20:22.844239+00:00"
+    },
+    {
+      "id": "02_home_fire",
+      "title": "House-fire smoke and pet rescue",
+      "duration_seconds": 24.266666666666666,
+      "fps": 15.0,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "demo/generated/online/02_home_fire.mp4",
+          "sha256": "ea6394e4fe130eaa1e0f8e375f677a9d1019edc748f2c639121f7b9031f44e8d"
+        }
+      ],
+      "suggested_events": [
+        "danger"
+      ],
+      "credit": {
+        "creator": "Ring",
+        "source_url": "https://www.youtube.com/watch?v=8zffAHmoPg4",
+        "license": "CC BY",
+        "license_url": "https://www.youtube.com/t/creative_commons"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": true,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        },
+        "barking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        },
+        "danger": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 24.266666666666666
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:21:10.627840+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:21:10.627840+00:00"
+    },
+    {
+      "id": "03_pet_trapped",
+      "title": "Dog trapped between fence bars",
+      "duration_seconds": 52.1,
+      "fps": 50.0,
+      "media": [
+        {
+          "variant": "480p",
+          "file": "demo/generated/online/03_pet_trapped.mp4",
+          "sha256": "44a74db139c8f8f2c3e1f59dec2bf7d184dc8be841f4db0965d94c9642bd7aaf"
+        }
+      ],
+      "suggested_events": [
+        "danger"
+      ],
+      "credit": {
+        "creator": "RSPCA South Australia",
+        "source_url": "https://www.youtube.com/watch?v=n1OXCBzALyY",
+        "license": "CC BY",
+        "license_url": "https://www.youtube.com/t/creative_commons"
+      },
+      "enabled": true,
+      "annotation_status": "confirmed",
+      "annotation_revision": 1,
+      "has_audio": true,
+      "annotations": {
+        "drinking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        },
+        "eating": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        },
+        "playing_with_mask": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        },
+        "furniture_chewing": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        },
+        "barking": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        },
+        "standing_on_hind_legs": {
+          "label": "not_observed",
+          "intervals": [],
+          "timing_status": "not_applicable",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        },
+        "danger": {
+          "label": "observed",
+          "intervals": [
+            {
+              "start": 5.289239,
+              "end": 9.066179
+            },
+            {
+              "start": 18.389339,
+              "end": 34.243289
+            }
+          ],
+          "timing_status": "confirmed",
+          "review_status": "confirmed",
+          "reviewed_by": "User via labeling UI",
+          "basis": "Awaiting manual review; suggested event names are not ground truth.",
+          "reviewed_at": "2026-11-02T08:22:49.647780+00:00"
+        }
+      },
+      "updated_at": "2026-11-02T08:22:49.647780+00:00"
+    }
+  ],
+  "updated_at": "2026-11-02T08:59:01.624450+00:00",
+  "exclusion_history": [
+    {
+      "clip_id": "dog_eating_8056266",
+      "reason": "Excluded at user request after reviewing initial evaluation: bowl contents are not visible, so eating versus drinking cannot be established fairly.",
+      "decided_at": "2026-11-02T08:59:01.624450+00:00",
+      "stage": "after first evaluation",
+      "requested_by": "User in project conversation"
+    }
+  ]
+}

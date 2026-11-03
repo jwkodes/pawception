@@ -1,0 +1,102 @@
+{
+  "type": "json_schema",
+  "name": "pet_event_detections",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "barking": {
+        "type": "object",
+        "properties": {
+          "detected": {
+            "type": "boolean"
+          },
+          "intervals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "number"
+                },
+                "end": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "start",
+                "end"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "pet_segmentation_prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 120
+          },
+          "object_segmentation_prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 120
+          },
+          "evidence_timestamp": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "pet_bbox": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "object_bbox": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "detected",
+          "intervals",
+          "evidence",
+          "pet_segmentation_prompt",
+          "object_segmentation_prompt",
+          "evidence_timestamp",
+          "pet_bbox",
+          "object_bbox"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "barking"
+    ],
+    "additionalProperties": false
+  }
+}

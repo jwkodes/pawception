@@ -1,0 +1,34 @@
+[
+  {
+    "width": 854,
+    "height": 480,
+    "duration_seconds": 7.2,
+    "fps": 25.0,
+    "frame_count": 180,
+    "playable": true,
+    "file": "videos/dog_drinking_8056538.mp4",
+    "bytes": 738332,
+    "sha256": "a3449e23ac60f2b4ce74cc9d18a9c81056445edf2b568487983dc04b288a2386",
+    "decoded_preview_frames": [
+      "previews/dog_drinking_8056538_1.jpg",
+      "previews/dog_drinking_8056538_2.jpg",
+      "previews/dog_drinking_8056538_3.jpg"
+    ]
+  },
+  {
+    "width": 854,
+    "height": 480,
+    "duration_seconds": 12.68,
+    "fps": 25.0,
+    "frame_count": 317,
+    "playable": true,
+    "file": "videos/dog_playing_with_mask_8056264.mp4",
+    "bytes": 1684302,
+    "sha256": "beca1bdb469c10e1dad4d0c87ec89bf11391167d5aad2a2553e2e6edb6495d3d",
+    "decoded_preview_frames": [
+      "previews/dog_playing_with_mask_8056264_1.jpg",
+      "previews/dog_playing_with_mask_8056264_2.jpg",
+      "previews/dog_playing_with_mask_8056264_3.jpg"
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed"><title>Pawception · Developer lab</title>
+  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/experiments.css"><link rel="stylesheet" href="/pipeline.css"><script src="/app.js" defer></script><script src="/experiments.js" defer></script><script src="/pipeline.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar"><a class="brand" href="/" aria-label="Pawception home"><img class="brand-mark" src="/pawception-logo.png" alt="" width="44" height="44">pawception<span class="brand-divider"></span><span class="brand-section">developer lab</span></a><nav class="product-nav" aria-label="Pawception pages"><a href="/monitor">Monitor</a><a href="/offline">Recording analysis</a><a href="/label">Label videos</a></nav><span class="mock-badge" id="data-badge" data-short-label="Muse"><span></span>Saved Muse results</span></header>
+    <main>
+      <nav class="lab-tabs" role="tablist" aria-label="Developer views"><button id="experiments-tab" role="tab" aria-selected="true" aria-controls="experiments-view" data-view="experiments">Muse experiments <span>real API results</span></button><button id="pipeline-tab" role="tab" aria-selected="false" aria-controls="pipeline-view" data-view="pipeline">Video pipeline <span>windows → alerts</span></button><button id="mock-tab" role="tab" aria-selected="false" aria-controls="mock-view" data-view="mock">Temporal replay <span>synthetic observations</span></button></nav>
+      <section id="pipeline-view" role="tabpanel" aria-labelledby="pipeline-tab" hidden>
+        <div class="experiments-heading"><div><p class="eyebrow">THE CONNECTED PIPELINE</p><h1>From frames.<br>To alerts.</h1><p class="intro">Inspect each window’s yes/no decision and event intervals,<br>and when detected time reaches the alert threshold.</p></div><div class="pipeline-picker"><label for="pipeline-run">Saved pipeline run</label><select id="pipeline-run"></select><button id="pipeline-refresh" class="text-button">Refresh ↻</button><span id="pipeline-sync" role="status"></span></div></div>
+        <div id="pipeline-error" role="alert" hidden></div>
+        <p id="pipeline-notice" class="pipeline-note"></p>
+        <div id="pipeline-summary" class="pipeline-stats"></div>
+        <details class="experiment-disclosure"><summary>Task, model settings, source, and run configuration</summary><pre id="pipeline-config"></pre></details>
+        <div class="pipeline-workspace">
+          <section class="pipeline-player-card">
+            <video id="pipeline-video" controls playsinline preload="metadata" aria-label="Pipeline source video"></video>
+            <div class="pipeline-transport"><button id="pipeline-restart" class="text-button">↺ Excerpt start</button><span id="pipeline-clock">0.00s</span><a id="pipeline-export" download>Export replay JSON ↗</a></div>
+            <input id="pipeline-scrubber" type="range" min="0" max="40" step="0.05" value="0" aria-label="Pipeline video position">
+            <div id="pipeline-timeline" aria-label="Window decisions, detected events, and alerts"></div>
+            <ul class="pipeline-legend" aria-label="Timeline legend">
+              <li><span aria-hidden="true"><i class="pipeline-bar observed"></i></span>Yes window</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar not_observed"></i></span>No detection</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar event"></i></span>Detected interval</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar alert"></i></span>Alert</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar pending"></i></span>Pending / running</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar error"></i></span>Processing error</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar playhead"></i></span>Video position</li>
+              <li><span aria-hidden="true"><i class="pipeline-bar frontier"></i></span>Processed through</li>
+            </ul>
+            <p class="pipeline-caption">Any positive window contributes to the event timeline. Continuous detected time triggers an alert; overlapping time counts once.</p>
+          </section>
+          <aside class="inspector-panel pipeline-inspector"><div class="panel-heading"><h2>Inspect the evidence</h2></div><div id="pipeline-inspector"></div></aside>
+        </div>
+        <section class="alerts-section"><div class="alerts-heading"><h2>Alert trail <span id="pipeline-alert-count">0</span></h2><span>Click to seek to supporting footage</span></div><div id="pipeline-alerts" class="alert-list"></div></section>
+        <footer><span class="footer-logo">pawception</span><p>Recorded-video replay · Yes/no detections → duration threshold → alert · No model calls from this page</p></footer>
+      </section>
+      <section id="experiments-view" role="tabpanel" aria-labelledby="experiments-tab">
+        <div class="experiments-heading"><div><p class="eyebrow">YOUR DEVELOPER WORKSPACE</p><h1>Every input.<br>Every result.</h1><p class="intro">See the clip, the exact request, and what Muse returned.<br>Saved locally. No inference calls from this page.</p></div><div class="experiment-refresh"><button id="refresh-experiments" class="primary-button">Refresh results ↻</button><p id="experiment-sync" role="status">Reading local experiment files…</p><label><input id="auto-refresh" type="checkbox" checked> Auto-refresh every 5s</label></div></div>
+        <p class="pipeline-note"><strong>Whole-video experiments</strong> Inspect independent Muse calls here. The <strong>Video pipeline</strong> tab connects short video windows to yes/no detections and alerts. SAM evidence annotations are not connected yet.</p>
+        <div id="experiments-error" role="alert" hidden></div>
+        <div class="experiment-layout"><aside class="run-sidebar"><div class="run-sidebar-title"><h2>Saved runs</h2><span id="run-total">0</span></div><div id="experiment-runs"></div></aside><div id="experiment-detail"><div class="experiment-empty">Loading saved experiments…</div></div></div>
+        <footer><span class="footer-logo">pawception</span><p>Developer lab · Read-only experiment records · Estimates in USD</p></footer>
+      </section>
+      <div id="mock-view" role="tabpanel" aria-labelledby="mock-tab" hidden>
+      <div class="page-heading"><div><p class="eyebrow">MONITORING, MADE VISIBLE</p><h1>A little context.<br>A clearer picture.</h1><p class="intro">Follow an observation from a moment on camera to an alert.<br class="desktop-break"> Explore what changes when time, repetition, and visibility matter.</p></div><div class="run-stamp"><span class="status-dot"></span> Local engine <span id="run-stamp">· Ready</span><p>No camera or API connection</p></div></div>
+
+      <div class="workspace">
+        <section class="replay-panel" aria-label="Replay timeline">
+          <div class="panel-heading"><div><span class="section-index">01</span><h2>The observation timeline</h2></div><span class="quiet-chip">Camera 01 <span>·</span> Golden retriever</span></div>
+          <div class="transport"><button id="play" class="play-button" aria-label="Play replay"><span id="play-icon">▶</span></button><div class="clock"><strong id="clock">00:30</strong><span>/ <span id="duration">01:20</span></span></div><div class="transport-actions"><button id="restart" class="text-button">↺ Restart</button><button id="next-result" class="text-button">Next result <span>→</span></button><button id="next-alert" class="text-button">Next alert <span>↗</span></button><label class="speed-label"><span class="sr-only">Replay speed</span><select id="speed" aria-label="Replay speed"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></label></div></div>
+          <label class="scrubber-label" for="scrubber"><span>Replay position</span><span id="analysis-clock">Analysis complete through 00:30</span></label>
+          <input id="scrubber" class="scrubber" type="range" min="0" max="80" step="0.1" value="30" aria-label="Replay position in seconds">
+          <div class="timeline-toolbar"><p><span class="small-dot"></span>Click any bar or alert to inspect it.</p><label class="toggle-label"><input id="show-future" type="checkbox" checked>Show future fixture</label></div>
+          <div class="timeline-scroll"><div id="timeline" class="timeline" aria-label="Observation, coverage, episode, and alert timeline"></div></div>
+          <div class="legend"><span><i class="key observed"></i>Observation with event</span><span><i class="key quiet"></i>Observable, no event</span><span><i class="key gap"></i>Unknown coverage</span><span><i class="key episode"></i>Merged episode</span><span><i class="key alert"></i>Alert onset</span><span><i class="key detected"></i>Result available</span></div>
+          <div class="timeline-caption"><span>Two clocks, one honest replay.</span> The solid marker shows when a condition became true. The hollow marker shows when analysis made it available. Dark ticks mark event intervals within observation windows. Faded bars are future fixture data.</div>
+        </section>
+
+        <aside class="inspector-panel" aria-label="Event inspector"><div class="panel-heading"><div><span class="section-index">02</span><h2>A closer look</h2></div><span class="live-pill" id="inspector-status">At 00:30</span></div><div id="inspector"></div></aside>
+      </div>
+
+      <section class="rules-section" aria-label="Monitoring rules"><div class="rules-title"><div><p class="eyebrow">TRY A DIFFERENT CONDITION</p><h2>Same moments. Different rules.</h2></div><p>Adjust a rule, then rerun the Python engine.<br>Every run starts with fresh state.</p></div>
+        <form id="rules-form"><div class="rule-card"><div class="rule-card-heading"><span class="rule-icon chew-icon">↻</span><div><span class="rule-type">REPEATED EVENT</span><h3>Sofa chewing</h3></div></div><div class="rule-inputs"><label>Episodes<input id="threshold" name="threshold" type="number" min="1" max="20" step="1" value="3" required></label><label>Within (seconds)<input id="repeated-window" name="repeated_window_seconds" type="number" min="1" max="600" value="30" required></label><label>Merge gap (seconds)<input id="merge-gap" name="merge_gap_seconds" type="number" min="0" max="30" step="0.5" value="1" required></label></div><p class="rule-footnote">Overlapping reports count as one episode. A blind interval cannot prove a restart.</p></div>
+        <div class="rule-card"><div class="rule-card-heading"><span class="rule-icon water-icon">◷</span><div><span class="rule-type">MISSING EVENT</span><h3>Water-bowl visit</h3></div></div><div class="missing-inputs"><label>Without a visit (seconds)<input id="missing-window" name="missing_window_seconds" type="number" min="1" max="600" value="10" required></label><label class="gap-switch"><input id="include-gap" name="include_gap" type="checkbox" checked><span>Include coverage gap<span class="gap-subtitle">Unknown from 15s to 20s</span></span></label></div><p class="rule-footnote">The timer requires continuous coverage and starts again after a gap.</p></div>
+        <div class="run-actions"><button id="rerun" type="submit" class="primary-button">Rerun engine <span>↗</span></button><button id="reset" type="button" class="text-button">Reset defaults</button><span id="run-feedback" role="status" aria-live="polite">Default fixture · 4 expected alerts</span></div></form>
+      </section>
+
+      <section class="alerts-section" aria-label="Alerts discovered in replay"><div class="alerts-heading"><h2>The alert trail <span id="alert-count">2</span></h2><span>Available by the selected replay time</span></div><div id="alert-list" class="alert-list"></div></section>
+      <footer><span class="footer-logo">pawception</span><p>Mock replay · No real pet conclusions · Source time in seconds</p><a id="export" href="#">Export run JSON <span>↗</span></a></footer>
+      </div>
+      <div id="error" role="alert" hidden></div>
+    </main>
+  </div>
+</body>
+</html>

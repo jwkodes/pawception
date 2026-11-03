@@ -1,0 +1,187 @@
+{
+  "purpose": "Licensed footage for playback-paced online demos, not a reviewed accuracy benchmark.",
+  "license_review_date": "2026-10-31",
+  "models": {
+    "visual": "muse-spark-1.3-contributor",
+    "audio": "muse-spark-1.2-contributor",
+    "reasoning_effort": "medium"
+  },
+  "clips": [
+    {
+      "id": "01_cat_in_can",
+      "scenario": "Cat with head trapped in a food can",
+      "source_file": "candidates/generated/cc_by_household/kitten_stuck_can.480p.mp4",
+      "source_sha256": "dcd61b2a1e461ec09875d32c88912795f2e76c3eed72f4f7d5f13b7424a48601",
+      "title": "Kitten Stuck In Can",
+      "creator": "Shop with Me Mama",
+      "source_url": "https://www.youtube.com/watch?v=rdxUbjgg1Lw",
+      "license": "CC BY",
+      "license_url": "https://www.youtube.com/t/creative_commons",
+      "published_metadata": "archive/high_res/cc_by_household/rdxUbjgg1Lw.info.json",
+      "safety_watch": true,
+      "event": null,
+      "working": {
+        "width": 490,
+        "height": 480,
+        "duration_seconds": 15.633333333333333,
+        "fps": 30.0,
+        "frame_count": 469,
+        "playable": true,
+        "file": "demo/generated/online/01_cat_in_can.mp4",
+        "bytes": 2848753,
+        "sha256": "dcd61b2a1e461ec09875d32c88912795f2e76c3eed72f4f7d5f13b7424a48601"
+      }
+    },
+    {
+      "id": "02_home_fire",
+      "scenario": "House-fire smoke and pet rescue",
+      "source_file": "candidates/generated/cc_by_household/pets_house_fire.480p.mp4",
+      "source_sha256": "ea6394e4fe130eaa1e0f8e375f677a9d1019edc748f2c639121f7b9031f44e8d",
+      "title": "Pets Rescued From House Fire Seen Via Ring Doorbell & Stickup Cam | RingTV",
+      "creator": "Ring",
+      "source_url": "https://www.youtube.com/watch?v=8zffAHmoPg4",
+      "license": "CC BY",
+      "license_url": "https://www.youtube.com/t/creative_commons",
+      "published_metadata": "archive/high_res/cc_by_household/8zffAHmoPg4.info.json",
+      "safety_watch": true,
+      "event": null,
+      "working": {
+        "width": 854,
+        "height": 480,
+        "duration_seconds": 24.266666666666666,
+        "fps": 15.0,
+        "frame_count": 364,
+        "playable": true,
+        "file": "demo/generated/online/02_home_fire.mp4",
+        "bytes": 1486999,
+        "sha256": "ea6394e4fe130eaa1e0f8e375f677a9d1019edc748f2c639121f7b9031f44e8d"
+      }
+    },
+    {
+      "id": "03_pet_trapped",
+      "scenario": "Dog trapped between fence bars",
+      "source_file": "candidates/generated/cc_by_household/dog_trapped_fence.480p.mp4",
+      "source_sha256": "44a74db139c8f8f2c3e1f59dec2bf7d184dc8be841f4db0965d94c9642bd7aaf",
+      "title": "RSPCA rescues dog caught in pool fence",
+      "creator": "RSPCA South Australia",
+      "source_url": "https://www.youtube.com/watch?v=n1OXCBzALyY",
+      "license": "CC BY",
+      "license_url": "https://www.youtube.com/t/creative_commons",
+      "published_metadata": "archive/high_res/cc_by_household/n1OXCBzALyY.info.json",
+      "safety_watch": true,
+      "event": null,
+      "working": {
+        "width": 854,
+        "height": 480,
+        "duration_seconds": 52.1,
+        "fps": 50.0,
+        "frame_count": 2605,
+        "playable": true,
+        "file": "demo/generated/online/03_pet_trapped.mp4",
+        "bytes": 8899444,
+        "sha256": "44a74db139c8f8f2c3e1f59dec2bf7d184dc8be841f4db0965d94c9642bd7aaf"
+      }
+    },
+    {
+      "id": "04_intensive_barking",
+      "scenario": "Repeated, clearly audible barking",
+      "source_file": "candidates/generated/barking/channelcro_barking.480p.mp4",
+      "source_sha256": "ad64a63cd74de83b2487424d6752f34a344f9177d6bed96e39bff7d1017a04b8",
+      "title": "Dog Barking - Free Stock Footage",
+      "creator": "ChannelCro - Stock Footage",
+      "source_url": "https://www.youtube.com/watch?v=5OjbMgvwJCg",
+      "license": "CC BY",
+      "license_url": "https://www.youtube.com/t/creative_commons",
+      "published_metadata": "archive/high_res/barking/channelcro_barking.info.json",
+      "safety_watch": false,
+      "event": {
+        "name": "Intensive barking",
+        "description": "A dog barks repeatedly in closely spaced, forceful bursts. A single isolated bark does not qualify. Loudness is relative to the recording.",
+        "input_mode": "audio",
+        "threshold_seconds": 2
+      },
+      "working": {
+        "width": 854,
+        "height": 480,
+        "duration_seconds": 19.1191,
+        "fps": 29.97002997002997,
+        "frame_count": 573,
+        "playable": true,
+        "file": "demo/generated/online/04_intensive_barking.mp4",
+        "bytes": 6217047,
+        "sha256": "ad64a63cd74de83b2487424d6752f34a344f9177d6bed96e39bff7d1017a04b8"
+      }
+    },
+    {
+      "id": "05_hind_legs",
+      "scenario": "Dog standing upright on its hind legs",
+      "source_file": "videos/dogs_playing_5728455.mp4",
+      "source_sha256": "94f6c13fc6da4aca42ba32fdd6293dca0a84bb931a400111b4d1197f4dd3b0f0",
+      "title": "Two Dogs Playing Around",
+      "creator": "Sam Lion",
+      "source_url": "https://www.pexels.com/video/two-dogs-playing-around-5728455/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "published_metadata": "sources.json",
+      "safety_watch": false,
+      "event": {
+        "name": "Standing on hind legs",
+        "description": "A dog stands or walks upright on its hind legs with both front paws lifted off the ground. Brief jumping alone does not qualify.",
+        "input_mode": "visual",
+        "threshold_seconds": 1
+      },
+      "review": "Clear upright stance near the beginning. Excluded previously for ambiguous pet-to-pet playing, which is a different event.",
+      "working": {
+        "width": 480,
+        "height": 854,
+        "duration_seconds": 10.01,
+        "fps": 23.976023976023978,
+        "frame_count": 240,
+        "playable": true,
+        "file": "demo/generated/online/05_hind_legs.mp4",
+        "bytes": 1082803,
+        "sha256": "94f6c13fc6da4aca42ba32fdd6293dca0a84bb931a400111b4d1197f4dd3b0f0"
+      }
+    },
+    {
+      "id": "06_furniture_chewing",
+      "scenario": "Dog chewing wooden furniture",
+      "source_file": "archive/high_res/online/SxTn8YjeTGE.mp4",
+      "source_sha256": "f3c33b8d26ad1651d690351c78afceebc3ea9966358e65bb6b80d3c7ee28447b",
+      "title": "Owner caught dog chewing on her furniture!",
+      "creator": "Furbo Pet Camera",
+      "source_url": "https://www.youtube.com/watch?v=SxTn8YjeTGE",
+      "license": "CC BY",
+      "license_url": "https://www.youtube.com/t/creative_commons",
+      "published_metadata": "archive/high_res/online/SxTn8YjeTGE.info.json",
+      "safety_watch": false,
+      "event": {
+        "name": "Chewing furniture",
+        "description": "A pet bites, chews, or grips and tugs furniture, upholstery, or furniture cushions with its mouth. Walking, resting, sniffing, and proximity alone do not qualify.",
+        "input_mode": "visual",
+        "threshold_seconds": 2
+      },
+      "working": {
+        "width": 854,
+        "height": 480,
+        "duration_seconds": 14.881533333333334,
+        "fps": 29.97002997002997,
+        "frame_count": 446,
+        "playable": true,
+        "file": "demo/generated/online/06_furniture_chewing.mp4",
+        "bytes": 792139,
+        "sha256": "6ce70e91603647cbcf94f4b071786893c8cc183645aced3810ef8c69999b615b"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "source": "https://www.youtube.com/watch?v=vvqpJe2ZGpQ",
+      "reason": "ViralHog clip has no verified open public-demo license."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=w3TT9p3GdDo",
+      "reason": "Repost points to a compilation without verified CC licensing; excluded despite repost license tag."
+    }
+  ]
+}

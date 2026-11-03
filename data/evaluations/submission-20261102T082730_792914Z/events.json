@@ -1,0 +1,38 @@
+[
+  {
+    "id": "drinking",
+    "description": "A pet drinks liquid, including sustained lapping from a container.",
+    "input_mode": "visual",
+    "active_from": 0
+  },
+  {
+    "id": "eating",
+    "description": "A pet eats food, including taking food into its mouth and chewing.",
+    "input_mode": "visual",
+    "active_from": 0
+  },
+  {
+    "id": "playing_with_mask",
+    "description": "A pet mouths, carries, paws at, or tugs a surgical face mask.",
+    "input_mode": "visual",
+    "active_from": 0
+  },
+  {
+    "id": "furniture_chewing",
+    "description": "A pet bites, chews, or pulls furniture or its upholstery with its mouth.",
+    "input_mode": "visual",
+    "active_from": 0
+  },
+  {
+    "id": "barking",
+    "description": "A dog barks repeatedly in an audible bout. Label bouts rather than each individual bark.",
+    "input_mode": "audio",
+    "active_from": 0
+  },
+  {
+    "id": "standing_on_hind_legs",
+    "description": "A dog stands or balances upright on its hind legs, with both front paws off the ground.",
+    "input_mode": "visual",
+    "active_from": 0
+  }
+]

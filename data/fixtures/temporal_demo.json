@@ -1,0 +1,31 @@
+{
+  "source": "Synthetic observations only. These events are not Muse predictions or labels for downloaded videos.",
+  "time_unit": "seconds from source-video start",
+  "notes": "Short thresholds make the mock replay easy to inspect. Production rules may use minutes or hours.",
+  "rules": [
+    {"id": "sofa_chewing", "kind": "repeated", "subject": "golden retriever", "behavior": "chewing the sofa", "window_seconds": 30, "threshold": 3, "merge_gap_seconds": 1},
+    {"id": "water_visit", "kind": "missing", "subject": "golden retriever", "behavior": "visiting the water bowl", "window_seconds": 10}
+  ],
+  "observations": [
+    {"id": "chew_01", "rule_id": "sofa_chewing", "start": 0, "end": 10, "outcome": "observed", "events": [{"start": 2, "end": 4, "evidence": "mock://camera_1/chew_01"}]},
+    {"id": "chew_overlap", "rule_id": "sofa_chewing", "start": 3, "end": 12, "outcome": "observed", "events": [{"start": 3, "end": 4, "evidence": "mock://camera_1/chew_overlap"}]},
+    {"id": "chew_02", "rule_id": "sofa_chewing", "start": 12, "end": 20, "outcome": "observed", "events": [{"start": 14, "end": 15, "evidence": "mock://camera_1/chew_02"}]},
+    {"id": "chew_03", "rule_id": "sofa_chewing", "start": 20, "end": 30, "outcome": "observed", "events": [{"start": 24, "end": 25, "evidence": "mock://camera_1/chew_03"}]},
+    {"id": "chew_quiet_01", "rule_id": "sofa_chewing", "start": 30, "end": 40, "outcome": "not_observed"},
+    {"id": "chew_quiet_02", "rule_id": "sofa_chewing", "start": 40, "end": 50, "outcome": "not_observed"},
+    {"id": "chew_04", "rule_id": "sofa_chewing", "start": 50, "end": 60, "outcome": "observed", "events": [{"start": 52, "end": 53, "evidence": "mock://camera_1/chew_04"}]},
+    {"id": "chew_05", "rule_id": "sofa_chewing", "start": 60, "end": 70, "outcome": "observed", "events": [{"start": 62, "end": 63, "evidence": "mock://camera_1/chew_05"}]},
+    {"id": "chew_06", "rule_id": "sofa_chewing", "start": 70, "end": 80, "outcome": "observed", "events": [{"start": 72, "end": 73, "evidence": "mock://camera_1/chew_06"}]},
+    {"id": "water_quiet_01", "rule_id": "water_visit", "start": 0, "end": 10, "outcome": "not_observed"},
+    {"id": "water_quiet_02a", "rule_id": "water_visit", "start": 10, "end": 12, "outcome": "not_observed"},
+    {"id": "water_quiet_02b", "rule_id": "water_visit", "start": 12, "end": 15, "outcome": "not_observed"},
+    {"id": "water_blind", "rule_id": "water_visit", "start": 15, "end": 20, "outcome": "unknown"},
+    {"id": "water_recovery", "rule_id": "water_visit", "start": 20, "end": 30, "outcome": "not_observed"},
+    {"id": "water_actual_visit", "rule_id": "water_visit", "start": 30, "end": 40, "outcome": "observed", "events": [{"start": 38, "end": 39, "evidence": "mock://camera_1/water_visit"}]},
+    {"id": "water_quiet_03", "rule_id": "water_visit", "start": 40, "end": 50, "outcome": "not_observed"},
+    {"id": "water_quiet_04", "rule_id": "water_visit", "start": 50, "end": 60, "outcome": "not_observed"},
+    {"id": "water_quiet_05", "rule_id": "water_visit", "start": 60, "end": 70, "outcome": "not_observed"},
+    {"id": "water_quiet_06", "rule_id": "water_visit", "start": 70, "end": 80, "outcome": "not_observed"}
+  ],
+  "evaluation_times": [12, 20, 30, 40, 50, 60, 70, 80]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Furniture monitoring example",
+  "input_kind": "visual",
+  "visual_evidence": true,
+  "bounding_boxes": true,
+  "safety_watch": true,
+  "known_hazards": [],
+  "events": [
+    {
+      "id": "furniture_chewing",
+      "description": "Alert when the pet bites, chews, or pulls on furniture. This includes mouthing the edge or surface and tugging at fabric or cushions with mouth or paws. Sniffing, resting against, or walking past furniture without biting, chewing, or pulling does not count. Resting at the same time still counts if biting, chewing, or pulling continues.",
+      "input_mode": "visual"
+    }
+  ]
+}

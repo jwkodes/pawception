@@ -1,0 +1,4198 @@
+{
+  "run_id": "submission-20261102T082730_792914Z",
+  "status": "completed",
+  "dataset_id": "pawception_submission_eval",
+  "dataset_version": "1.0.0",
+  "dataset_revision": 11,
+  "dataset_sha256": "149cc56f15a0cb99b993cd92cb5c37392c6d342a8c5800e096ba09a111602efd",
+  "config": {
+    "visual_model": "muse-spark-1.3-contributor",
+    "audio_model": "muse-spark-1.2-contributor",
+    "video_reasoning_effort": "medium",
+    "audio_reasoning_effort": "medium",
+    "window_seconds": 60,
+    "overlap_seconds": 0,
+    "repeats": 1
+  },
+  "summary": {
+    "scored_cases": 54,
+    "positive_cases": 9,
+    "negative_cases": 45,
+    "true_positives": 9,
+    "false_positives": 0,
+    "positive_misses_including_abstentions": 0,
+    "true_negatives": 45,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "positive_recall": 1.0,
+    "decision_coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "abstentions": 0,
+    "missing_predictions": 0,
+    "unrequested_confirmed_cases": 0,
+    "invalid_predictions": 0,
+    "invalid_interval_cases": 0,
+    "infrastructure_failure_cases": 2,
+    "skipped_cases": {
+      "unassessable_ground_truth": 2
+    },
+    "independent_clips": 8,
+    "timing": {
+      "scored_cases": 54,
+      "mean_iou": 0.8322635655742178,
+      "event_true_positives": 10,
+      "event_false_positives": 0,
+      "event_false_negatives": 0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "mean_onset_error_seconds": 0.13285779999999997,
+      "mean_offset_error_seconds": 1.7793284666666662
+    },
+    "mean_positive_temporal_iou": 0.8322635655742178,
+    "false_positive_rate": 0.0,
+    "eligible_cases": 54,
+    "processing_coverage": 1.0
+  },
+  "custom": {
+    "scored_cases": 46,
+    "positive_cases": 5,
+    "negative_cases": 41,
+    "true_positives": 5,
+    "false_positives": 0,
+    "positive_misses_including_abstentions": 0,
+    "true_negatives": 41,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "positive_recall": 1.0,
+    "decision_coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "abstentions": 0,
+    "missing_predictions": 0,
+    "unrequested_confirmed_cases": 0,
+    "invalid_predictions": 0,
+    "invalid_interval_cases": 0,
+    "infrastructure_failure_cases": 2,
+    "skipped_cases": {
+      "unassessable_ground_truth": 2
+    },
+    "independent_clips": 8,
+    "timing": {
+      "scored_cases": 46,
+      "mean_iou": 0.8357379474419574,
+      "event_true_positives": 5,
+      "event_false_positives": 0,
+      "event_false_negatives": 0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "mean_onset_error_seconds": 0.03,
+      "mean_offset_error_seconds": 1.7573304
+    },
+    "mean_positive_temporal_iou": 0.8357379474419574
+  },
+  "raw_interval_metrics": {
+    "scored_cases": 54,
+    "positive_cases": 9,
+    "negative_cases": 45,
+    "true_positives": 9,
+    "false_positives": 0,
+    "positive_misses_including_abstentions": 0,
+    "true_negatives": 45,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "positive_recall": 1.0,
+    "decision_coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "abstentions": 0,
+    "missing_predictions": 0,
+    "unrequested_confirmed_cases": 0,
+    "invalid_predictions": 0,
+    "invalid_interval_cases": 0,
+    "infrastructure_failure_cases": 2,
+    "skipped_cases": {
+      "unassessable_ground_truth": 2
+    },
+    "independent_clips": 8,
+    "timing": {
+      "scored_cases": 54,
+      "mean_iou": 0.8322635655742178,
+      "event_true_positives": 9,
+      "event_false_positives": 4,
+      "event_false_negatives": 1,
+      "event_precision": 0.6923076923076923,
+      "event_recall": 0.9,
+      "mean_onset_error_seconds": 0.1309531111111111,
+      "mean_offset_error_seconds": 1.9526871851851846
+    },
+    "mean_positive_temporal_iou": 0.8322635655742178
+  },
+  "postprocessing": {
+    "merge_gap_seconds": 1,
+    "gap_source": "application default (not recorded by the original collector)",
+    "episode_iou": "IoU of actual detected pieces within each merged episode; bridged gaps do not add detected time.",
+    "ground_truth": "Original manually labeled episodes are unchanged."
+  },
+  "safety_watch": {
+    "scored_cases": 8,
+    "positive_cases": 4,
+    "negative_cases": 4,
+    "true_positives": 4,
+    "false_positives": 0,
+    "positive_misses_including_abstentions": 0,
+    "true_negatives": 4,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "positive_recall": 1.0,
+    "decision_coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "abstentions": 0,
+    "missing_predictions": 0,
+    "unrequested_confirmed_cases": 0,
+    "invalid_predictions": 0,
+    "invalid_interval_cases": 0,
+    "infrastructure_failure_cases": 0,
+    "skipped_cases": {},
+    "independent_clips": 8,
+    "timing": {
+      "scored_cases": 8,
+      "mean_iou": 0.8279205882395435,
+      "event_true_positives": 5,
+      "event_false_positives": 0,
+      "event_false_negatives": 0,
+      "event_precision": 1.0,
+      "event_recall": 1.0,
+      "mean_onset_error_seconds": 0.23571559999999997,
+      "mean_offset_error_seconds": 1.8013265333333321
+    },
+    "mean_positive_temporal_iou": 0.8279205882395435
+  },
+  "per_event": {
+    "drinking": {
+      "scored_cases": 8,
+      "positive_cases": 1,
+      "negative_cases": 7,
+      "true_positives": 1,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 7,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "positive_recall": 1.0,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 0,
+      "skipped_cases": {},
+      "independent_clips": 8,
+      "timing": {
+        "scored_cases": 8,
+        "mean_iou": 1.0,
+        "event_true_positives": 1,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": 1.0,
+        "event_recall": 1.0,
+        "mean_onset_error_seconds": 0.0,
+        "mean_offset_error_seconds": 0.0
+      },
+      "mean_positive_temporal_iou": 1.0
+    },
+    "eating": {
+      "scored_cases": 8,
+      "positive_cases": 0,
+      "negative_cases": 8,
+      "true_positives": 0,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 8,
+      "accuracy": 1.0,
+      "precision": null,
+      "positive_recall": null,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 0,
+      "skipped_cases": {},
+      "independent_clips": 8,
+      "timing": {
+        "scored_cases": 8,
+        "mean_iou": null,
+        "event_true_positives": 0,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": null,
+        "event_recall": null,
+        "mean_onset_error_seconds": null,
+        "mean_offset_error_seconds": null
+      },
+      "mean_positive_temporal_iou": null
+    },
+    "playing_with_mask": {
+      "scored_cases": 8,
+      "positive_cases": 1,
+      "negative_cases": 7,
+      "true_positives": 1,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 7,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "positive_recall": 1.0,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 0,
+      "skipped_cases": {},
+      "independent_clips": 8,
+      "timing": {
+        "scored_cases": 8,
+        "mean_iou": 0.6802471608832807,
+        "event_true_positives": 1,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": 1.0,
+        "event_recall": 1.0,
+        "mean_onset_error_seconds": 0.0,
+        "mean_offset_error_seconds": 4.054466
+      },
+      "mean_positive_temporal_iou": 0.6802471608832807
+    },
+    "furniture_chewing": {
+      "scored_cases": 8,
+      "positive_cases": 1,
+      "negative_cases": 7,
+      "true_positives": 1,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 7,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "positive_recall": 1.0,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 0,
+      "skipped_cases": {},
+      "independent_clips": 8,
+      "timing": {
+        "scored_cases": 8,
+        "mean_iou": 0.7029705002647387,
+        "event_true_positives": 1,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": 1.0,
+        "event_recall": 1.0,
+        "mean_onset_error_seconds": 0.0,
+        "mean_offset_error_seconds": 4.225348
+      },
+      "mean_positive_temporal_iou": 0.7029705002647387
+    },
+    "barking": {
+      "scored_cases": 6,
+      "positive_cases": 1,
+      "negative_cases": 5,
+      "true_positives": 1,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 5,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "positive_recall": 1.0,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 2,
+      "skipped_cases": {
+        "unassessable_ground_truth": 2
+      },
+      "independent_clips": 6,
+      "timing": {
+        "scored_cases": 6,
+        "mean_iou": 0.8917783786893735,
+        "event_true_positives": 1,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": 1.0,
+        "event_recall": 1.0,
+        "mean_onset_error_seconds": 0.15,
+        "mean_offset_error_seconds": 0.21910000000000096
+      },
+      "mean_positive_temporal_iou": 0.8917783786893735
+    },
+    "standing_on_hind_legs": {
+      "scored_cases": 8,
+      "positive_cases": 1,
+      "negative_cases": 7,
+      "true_positives": 1,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 7,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "positive_recall": 1.0,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 0,
+      "skipped_cases": {},
+      "independent_clips": 8,
+      "timing": {
+        "scored_cases": 8,
+        "mean_iou": 0.9036936973723936,
+        "event_true_positives": 1,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": 1.0,
+        "event_recall": 1.0,
+        "mean_onset_error_seconds": 0.0,
+        "mean_offset_error_seconds": 0.2877379999999996
+      },
+      "mean_positive_temporal_iou": 0.9036936973723936
+    },
+    "danger": {
+      "scored_cases": 8,
+      "positive_cases": 4,
+      "negative_cases": 4,
+      "true_positives": 4,
+      "false_positives": 0,
+      "positive_misses_including_abstentions": 0,
+      "true_negatives": 4,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "positive_recall": 1.0,
+      "decision_coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "abstentions": 0,
+      "missing_predictions": 0,
+      "unrequested_confirmed_cases": 0,
+      "invalid_predictions": 0,
+      "invalid_interval_cases": 0,
+      "infrastructure_failure_cases": 0,
+      "skipped_cases": {},
+      "independent_clips": 8,
+      "timing": {
+        "scored_cases": 8,
+        "mean_iou": 0.8279205882395435,
+        "event_true_positives": 5,
+        "event_false_positives": 0,
+        "event_false_negatives": 0,
+        "event_precision": 1.0,
+        "event_recall": 1.0,
+        "mean_onset_error_seconds": 0.23571559999999997,
+        "mean_offset_error_seconds": 1.8013265333333321
+      },
+      "mean_positive_temporal_iou": 0.8279205882395435
+    }
+  },
+  "clips": [
+    {
+      "clip_id": "dog_drinking_8056538",
+      "title": "Dog at a bowl — drinking candidate",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 6,
+        "positive_cases": 1,
+        "negative_cases": 5,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 5,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 1,
+        "skipped_cases": {
+          "unassessable_ground_truth": 1
+        },
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 6,
+          "mean_iou": 1.0,
+          "event_true_positives": 1,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.0,
+          "mean_offset_error_seconds": 0.0
+        },
+        "mean_positive_temporal_iou": 1.0
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 7.2
+            }
+          ],
+          "evidence": [
+            "Beagle puppy keeps head lowered in white bowl for entire clip with sustained lapping posture consistent with drinking liquid."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No food visible and no taking food or chewing observed; puppy's head remains in bowl in a drinking posture."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No surgical face mask is visible and no mouthing, carrying, or tugging of a mask occurs."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Puppy does not bite, chew, or pull furniture; it remains focused on the bowl near the wooden post."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [],
+          "unavailable": true
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Puppy remains on all four paws throughout; no upright balancing on hind legs with front paws off ground."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 24.998
+    },
+    {
+      "clip_id": "dog_playing_with_mask_8056264",
+      "title": "Dog interacting with a surgical mask",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 6,
+        "positive_cases": 2,
+        "negative_cases": 4,
+        "true_positives": 2,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 4,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 1,
+        "skipped_cases": {
+          "unassessable_ground_truth": 1
+        },
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 6,
+          "mean_iou": 0.6802471608832807,
+          "event_true_positives": 2,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.0,
+          "mean_offset_error_seconds": 4.054466
+        },
+        "mean_positive_temporal_iou": 0.6802471608832807
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No liquid, container, or lapping visible; puppy sniffs and mouths a mask on wooden floor."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No food visible; puppy mouths and carries a white mask, not taking food into mouth or chewing food."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 12.68
+            }
+          ],
+          "evidence": [
+            "Beagle puppy mouths, carries, paws at and tugs a white surgical mask across the wooden floor throughout the clip."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Puppy noses wooden threshold while holding mask but shows no clear biting, chewing, or pulling of furniture or upholstery."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [],
+          "unavailable": true
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Puppy remains on all four paws throughout; never stands or balances upright on hind legs with both front paws off ground."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 12.68
+            }
+          ],
+          "evidence": [
+            "Beagle puppy mouths, carries and paws at white surgical mask; elastic ear loop wraps around front leg/paw, causing entanglement with risk of tightening, choking, or ingestion."
+          ],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 35.638
+    },
+    {
+      "clip_id": "06_furniture_chewing",
+      "title": "Dog chewing wooden furniture",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 7,
+        "positive_cases": 1,
+        "negative_cases": 6,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 0,
+        "skipped_cases": {},
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 7,
+          "mean_iou": 0.7029705002647387,
+          "event_true_positives": 1,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.0,
+          "mean_offset_error_seconds": 4.225348
+        },
+        "mean_positive_temporal_iou": 0.7029705002647387
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No liquid container or lapping motion visible; dog stands near chair without drinking."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No food intake or chewing of food visible; dog mouth contacts furniture, not food."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No surgical face mask visible; dog does not mouth, carry or paw at any mask."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 10.0
+            }
+          ],
+          "evidence": [
+            "Large golden dog stands beside wooden armchair with mouth on armrest making biting/chewing motions for several seconds."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No audible bout of repeated dog barks detected across 0-14.88s; no sharp repetitive bark vocalizations present."
+          ],
+          "unavailable": false
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Dog remains on all four paws throughout; never balances upright with both front paws off ground."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 23.559
+    },
+    {
+      "clip_id": "04_intensive_barking",
+      "title": "Repeated, clearly audible barking",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 7,
+        "positive_cases": 1,
+        "negative_cases": 6,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 0,
+        "skipped_cases": {},
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 7,
+          "mean_iou": 0.8917783786893735,
+          "event_true_positives": 1,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.15,
+          "mean_offset_error_seconds": 0.21910000000000096
+        },
+        "mean_positive_temporal_iou": 0.8917783786893735
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Dog moves around grassy yard with mouth open panting/barking but no container, liquid, or lapping behavior is visible."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No food is visible and dog does not take anything into mouth or chew; mouth opening is panting/barking."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No surgical face mask appears in the video; dog does not mouth, carry, or paw at any mask."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Scene is an outdoor grassy yard with no furniture or upholstery; dog does not bite or chew furniture."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.15,
+              "end": 3.8
+            },
+            {
+              "start": 4.2,
+              "end": 9.1
+            },
+            {
+              "start": 9.6,
+              "end": 12.9
+            },
+            {
+              "start": 13.7,
+              "end": 18.9
+            }
+          ],
+          "evidence": [
+            "Repeated sharp dog barks audible in multiple distinct bouts throughout the recording with short pauses between bouts"
+          ],
+          "unavailable": false
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Dog walks and stands on all four legs throughout; no upright posture with both front paws off the ground is observed."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 28.903
+    },
+    {
+      "clip_id": "05_hind_legs",
+      "title": "Dog standing upright on its hind legs",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 7,
+        "positive_cases": 1,
+        "negative_cases": 6,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 0,
+        "skipped_cases": {},
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 7,
+          "mean_iou": 0.9036936973723936,
+          "event_true_positives": 1,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.0,
+          "mean_offset_error_seconds": 0.2877379999999996
+        },
+        "mean_positive_temporal_iou": 0.9036936973723936
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No liquid, container, or lapping motion visible; two dogs stand in empty white studio."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No food or eating motion visible; dogs are standing and walking with mouths not taking food."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No surgical face mask visible; no mouthing, carrying, or tugging of a mask occurs."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No furniture or upholstery visible; empty white background with no biting or chewing of furniture."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No audible bout of repeated dog barking detected in the 0-10.01s recording."
+          ],
+          "unavailable": false
+        },
+        "standing_on_hind_legs": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 2.7
+            }
+          ],
+          "evidence": [
+            "Gray fluffy dog balances upright on hind legs with both front paws off ground at start of clip while black dog watches."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 23.596
+    },
+    {
+      "clip_id": "01_cat_in_can",
+      "title": "Cat with head trapped in a food can",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 7,
+        "positive_cases": 1,
+        "negative_cases": 6,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 0,
+        "skipped_cases": {},
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 7,
+          "mean_iou": 0.7993281380556929,
+          "event_true_positives": 1,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.0,
+          "mean_offset_error_seconds": 2.636032
+        },
+        "mean_positive_temporal_iou": 0.7993281380556929
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No sustained lapping from a liquid container is visible; cat's head is inside an empty food can while moving on bed, with no drinking observed."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Cat has head inside a 9Lives can but no visible food intake, chewing, or food in mouth is shown; insufficient evidence of eating."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Object involved is a metal cat food can, not a surgical face mask; no mouthing, carrying, or tugging of a mask occurs."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No biting, chewing, or pulling of furniture or upholstery is visible; cat interacts only with metal food can on bed."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No dog barking audible throughout the 15.63s recording; only instrumental music and male singing are present with no repeated bark bouts."
+          ],
+          "unavailable": false
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No dog standing upright on hind legs is visible; quadruped tabby cat remains on all fours while moving on bed."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 10.5
+            }
+          ],
+          "evidence": [
+            "Gray tabby cat on quilted bed has head fully inserted into empty blue metal 9Lives food can and walks blindly while struggling. Person must pull can off to free it. Trapped head creates suffocation and neck injury risk from tight metal rim."
+          ],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 25.911
+    },
+    {
+      "clip_id": "02_home_fire",
+      "title": "House-fire smoke and pet rescue",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 7,
+        "positive_cases": 1,
+        "negative_cases": 6,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 0,
+        "skipped_cases": {},
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 7,
+          "mean_iou": 0.9997252747252748,
+          "event_true_positives": 1,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.0,
+          "mean_offset_error_seconds": 0.006666666666664156
+        },
+        "mean_positive_temporal_iou": 0.9997252747252748
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No pet or container with liquid and no lapping behavior is visible in the outdoor or smoke-filled porch views."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No pet taking food into mouth or chewing is visible throughout the video."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No surgical face mask and no pet mouthing or carrying such an object is visible."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No pet biting or chewing furniture or upholstery is visible; scenes show vehicles, house smoke, and firefighters on a porch."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No repetitive dog bark bouts heard across 0-24.27s; audio contains human speech/shouting and loud crashing/banging/clattering sounds but no canine bark vocalizations."
+          ],
+          "unavailable": false
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No dog standing or balancing upright on hind legs with both front paws off ground is visible."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 24.26
+            }
+          ],
+          "evidence": [
+            "Thick dark gray and white smoke rises from the house on the left and spreads across the yard from the start, then dense smoke engulfs the porch camera view while firefighters move through it carrying a wire crate. The volume and darkness of smoke and its spread over the property indicates an uncontrolled house fire endangering the home and occupants."
+          ],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 26.8
+    },
+    {
+      "clip_id": "03_pet_trapped",
+      "title": "Dog trapped between fence bars",
+      "status": "completed",
+      "metrics": {
+        "scored_cases": 7,
+        "positive_cases": 1,
+        "negative_cases": 6,
+        "true_positives": 1,
+        "false_positives": 0,
+        "positive_misses_including_abstentions": 0,
+        "true_negatives": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "positive_recall": 1.0,
+        "decision_coverage": 1.0,
+        "selective_accuracy": 1.0,
+        "abstentions": 0,
+        "missing_predictions": 0,
+        "unrequested_confirmed_cases": 0,
+        "invalid_predictions": 0,
+        "invalid_interval_cases": 0,
+        "infrastructure_failure_cases": 0,
+        "skipped_cases": {},
+        "independent_clips": 1,
+        "timing": {
+          "scored_cases": 7,
+          "mean_iou": 0.8323817792939253,
+          "event_true_positives": 2,
+          "event_false_positives": 0,
+          "event_false_negatives": 0,
+          "event_precision": 1.0,
+          "event_recall": 1.0,
+          "mean_onset_error_seconds": 0.589289,
+          "mean_offset_error_seconds": 1.1547339999999986
+        },
+        "mean_positive_temporal_iou": 0.8323817792939253
+      },
+      "predictions": {
+        "drinking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No drinking observed; white dog is stuck in fence or being rescued, no sustained lapping from a container visible."
+          ],
+          "unavailable": false
+        },
+        "eating": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No eating observed; dog does not take food into mouth or chew, only stuck in fence and rescued."
+          ],
+          "unavailable": false
+        },
+        "playing_with_mask": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No surgical face mask present or interacted with; dog is trapped in fence, no mouthing or carrying of mask."
+          ],
+          "unavailable": false
+        },
+        "furniture_chewing": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No furniture chewing observed; dog's mouth contacts fence bars while trapped, no furniture biting or pulling."
+          ],
+          "unavailable": false
+        },
+        "barking": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "No audible bout of repeated dog barks detected across the full 52.1s recording."
+          ],
+          "unavailable": false
+        },
+        "standing_on_hind_legs": {
+          "assessment": "not_observed",
+          "intervals": [],
+          "evidence": [
+            "Dog never stands upright on hind legs; seen wedged on side/back in fence and later standing on all four legs."
+          ],
+          "unavailable": false
+        },
+        "danger": {
+          "assessment": "observed",
+          "intervals": [
+            {
+              "start": 5.0,
+              "end": 8.5
+            },
+            {
+              "start": 17.5,
+              "end": 32.5
+            }
+          ],
+          "evidence": [
+            "White dog Babi is firmly wedged with head/body between vertical bars of black pool fence, struggling and unable to free itself until inspector pries bars apart and lifts it out. Entrapment risks strangulation, pressure injury and distress."
+          ],
+          "unavailable": false
+        }
+      },
+      "total_seconds": 45.706
+    }
+  ],
+  "cases": [
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 7.2
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          1.0
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          0.0
+        ],
+        "iou": 1.0,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 7.2
+        }
+      ],
+      "correct": true,
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "Beagle puppy keeps head lowered in white bowl for entire clip with sustained lapping posture consistent with drinking liquid."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          1.0
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          0.0
+        ],
+        "iou": 1.0,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 7.2,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 7.2
+            }
+          ],
+          "detected_seconds": 7.2
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No food visible and no taking food or chewing observed; puppy's head remains in bowl in a drinking posture."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "No surgical face mask is visible and no mouthing, carrying, or tugging of a mask occurs."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "Puppy does not bite, chew, or pull furniture; it remains focused on the bowl near the wooden post."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "unassessable",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": false,
+      "prediction": "unavailable",
+      "interval_errors": [],
+      "timing": null,
+      "provisional": false,
+      "skip_reason": "unassessable_ground_truth",
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [],
+      "raw_timing": null,
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "Puppy remains on all four paws throughout; no upright balancing on hind legs with front paws off ground."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_drinking_8056538",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "No liquid, container, or lapping visible; puppy sniffs and mouths a mask on wooden floor."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No food visible; puppy mouths and carries a white mask, not taking food into mouth or chewing food."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 8.625534
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.6802471608832807
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          4.054466
+        ],
+        "iou": 0.6802471608832807,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 12.68
+        }
+      ],
+      "correct": true,
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "Beagle puppy mouths, carries, paws at and tugs a white surgical mask across the wooden floor throughout the clip."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.6802471608832807
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          4.054466
+        ],
+        "iou": 0.6802471608832807,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 12.68,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 12.68
+            }
+          ],
+          "detected_seconds": 12.68
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "Puppy noses wooden threshold while holding mask but shows no clear biting, chewing, or pulling of furniture or upholstery."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "unassessable",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": false,
+      "prediction": "unavailable",
+      "interval_errors": [],
+      "timing": null,
+      "provisional": false,
+      "skip_reason": "unassessable_ground_truth",
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [],
+      "raw_timing": null,
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "Puppy remains on all four paws throughout; never stands or balances upright on hind legs with both front paws off ground."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 8.625534
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.6802471608832807
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          4.054466
+        ],
+        "iou": 0.6802471608832807,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 12.68
+        }
+      ],
+      "correct": true,
+      "clip_id": "dog_playing_with_mask_8056264",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [
+        "Beagle puppy mouths, carries and paws at white surgical mask; elastic ear loop wraps around front leg/paw, causing entanglement with risk of tightening, choking, or ingestion."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.6802471608832807
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          4.054466
+        ],
+        "iou": 0.6802471608832807,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 12.68,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 12.68
+            }
+          ],
+          "detected_seconds": 12.68
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "No liquid container or lapping motion visible; dog stands near chair without drinking."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No food intake or chewing of food visible; dog mouth contacts furniture, not food."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "No surgical face mask visible; dog does not mouth, carry or paw at any mask."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 14.225348
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.7029705002647387
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          4.225348
+        ],
+        "iou": 0.7029705002647387,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 10.0
+        }
+      ],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "Large golden dog stands beside wooden armchair with mouth on armrest making biting/chewing motions for several seconds."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.7029705002647387
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          4.225348
+        ],
+        "iou": 0.7029705002647387,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 10.0
+            }
+          ],
+          "detected_seconds": 10.0
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [
+        "No audible bout of repeated dog barks detected across 0-14.88s; no sharp repetitive bark vocalizations present."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "Dog remains on all four paws throughout; never balances upright with both front paws off ground."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "06_furniture_chewing",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "Dog moves around grassy yard with mouth open panting/barking but no container, liquid, or lapping behavior is visible."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No food is visible and dog does not take anything into mouth or chew; mouth opening is panting/barking."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "No surgical face mask appears in the video; dog does not mouth, carry, or paw at any mask."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "Scene is an outdoor grassy yard with no furniture or upholstery; dog does not bite or chew furniture."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 19.1191
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.8917783786893735
+        ],
+        "onset_errors_seconds": [
+          0.15
+        ],
+        "offset_errors_seconds": [
+          0.21910000000000096
+        ],
+        "iou": 0.8917783786893735,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.15,
+          "end": 3.8
+        },
+        {
+          "start": 4.2,
+          "end": 9.1
+        },
+        {
+          "start": 9.6,
+          "end": 12.9
+        },
+        {
+          "start": 13.7,
+          "end": 18.9
+        }
+      ],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [
+        "Repeated sharp dog barks audible in multiple distinct bouts throughout the recording with short pauses between bouts"
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 4,
+        "false_negatives": 1,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": 0.8917783786893735,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.15,
+          "end": 18.9,
+          "intervals": [
+            {
+              "start": 0.15,
+              "end": 3.8
+            },
+            {
+              "start": 4.2,
+              "end": 9.1
+            },
+            {
+              "start": 9.6,
+              "end": 12.9
+            },
+            {
+              "start": 13.7,
+              "end": 18.9
+            }
+          ],
+          "detected_seconds": 17.05
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "Dog walks and stands on all four legs throughout; no upright posture with both front paws off the ground is observed."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "04_intensive_barking",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "No liquid, container, or lapping motion visible; two dogs stand in empty white studio."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No food or eating motion visible; dogs are standing and walking with mouths not taking food."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "No surgical face mask visible; no mouthing, carrying, or tugging of a mask occurs."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "No furniture or upholstery visible; empty white background with no biting or chewing of furniture."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [
+        "No audible bout of repeated dog barking detected in the 0-10.01s recording."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 2.987738
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.9036936973723936
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          0.2877379999999996
+        ],
+        "iou": 0.9036936973723936,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 2.7
+        }
+      ],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "Gray fluffy dog balances upright on hind legs with both front paws off ground at start of clip while black dog watches."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.9036936973723936
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          0.2877379999999996
+        ],
+        "iou": 0.9036936973723936,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 2.7,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 2.7
+            }
+          ],
+          "detected_seconds": 2.7
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "05_hind_legs",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "No sustained lapping from a liquid container is visible; cat's head is inside an empty food can while moving on bed, with no drinking observed."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "Cat has head inside a 9Lives can but no visible food intake, chewing, or food in mouth is shown; insufficient evidence of eating."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "Object involved is a metal cat food can, not a surgical face mask; no mouthing, carrying, or tugging of a mask occurs."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "No biting, chewing, or pulling of furniture or upholstery is visible; cat interacts only with metal food can on bed."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [
+        "No dog barking audible throughout the 15.63s recording; only instrumental music and male singing are present with no repeated bark bouts."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "No dog standing upright on hind legs is visible; quadruped tabby cat remains on all fours while moving on bed."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 13.136032
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.7993281380556929
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          2.636032
+        ],
+        "iou": 0.7993281380556929,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 10.5
+        }
+      ],
+      "correct": true,
+      "clip_id": "01_cat_in_can",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [
+        "Gray tabby cat on quilted bed has head fully inserted into empty blue metal 9Lives food can and walks blindly while struggling. Person must pull can off to free it. Trapped head creates suffocation and neck injury risk from tight metal rim."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.7993281380556929
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          2.636032
+        ],
+        "iou": 0.7993281380556929,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 10.5,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 10.5
+            }
+          ],
+          "detected_seconds": 10.5
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "No pet or container with liquid and no lapping behavior is visible in the outdoor or smoke-filled porch views."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No pet taking food into mouth or chewing is visible throughout the video."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "No surgical face mask and no pet mouthing or carrying such an object is visible."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "No pet biting or chewing furniture or upholstery is visible; scenes show vehicles, house smoke, and firefighters on a porch."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [
+        "No repetitive dog bark bouts heard across 0-24.27s; audio contains human speech/shouting and loud crashing/banging/clattering sounds but no canine bark vocalizations."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "No dog standing or balancing upright on hind legs with both front paws off ground is visible."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 0,
+          "end": 24.266666666666666
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.9997252747252748
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          0.006666666666664156
+        ],
+        "iou": 0.9997252747252748,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 0.0,
+          "end": 24.26
+        }
+      ],
+      "correct": true,
+      "clip_id": "02_home_fire",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [
+        "Thick dark gray and white smoke rises from the house on the left and spreads across the yard from the start, then dense smoke engulfs the porch camera view while firefighters move through it carrying a wire crate. The volume and darkness of smoke and its spread over the property indicates an uncontrolled house fire endangering the home and occupants."
+      ],
+      "raw_timing": {
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.9997252747252748
+        ],
+        "onset_errors_seconds": [
+          0.0
+        ],
+        "offset_errors_seconds": [
+          0.006666666666664156
+        ],
+        "iou": 0.9997252747252748,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 0.0,
+          "end": 24.26,
+          "intervals": [
+            {
+              "start": 0.0,
+              "end": 24.26
+            }
+          ],
+          "detected_seconds": 24.26
+        }
+      ]
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "drinking",
+      "category": "custom",
+      "evidence": [
+        "No drinking observed; white dog is stuck in fence or being rescued, no sustained lapping from a container visible."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "eating",
+      "category": "custom",
+      "evidence": [
+        "No eating observed; dog does not take food into mouth or chew, only stuck in fence and rescued."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "playing_with_mask",
+      "category": "custom",
+      "evidence": [
+        "No surgical face mask present or interacted with; dog is trapped in fence, no mouthing or carrying of mask."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "furniture_chewing",
+      "category": "custom",
+      "evidence": [
+        "No furniture chewing observed; dog's mouth contacts fence bars while trapped, no furniture biting or pulling."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "barking",
+      "category": "custom",
+      "evidence": [
+        "No audible bout of repeated dog barks detected across the full 52.1s recording."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "not_observed",
+      "review_status": "confirmed",
+      "timing_status": "not_applicable",
+      "expected_intervals": [],
+      "scored": true,
+      "prediction": "not_observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "standing_on_hind_legs",
+      "category": "custom",
+      "evidence": [
+        "Dog never stands upright on hind legs; seen wedged on side/back in fence and later standing on all four legs."
+      ],
+      "raw_timing": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [],
+        "onset_errors_seconds": [],
+        "offset_errors_seconds": [],
+        "iou": null,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": []
+    },
+    {
+      "expected": "observed",
+      "review_status": "confirmed",
+      "timing_status": "confirmed",
+      "expected_intervals": [
+        {
+          "start": 5.289239,
+          "end": 9.066179
+        },
+        {
+          "start": 18.389339,
+          "end": 34.243289
+        }
+      ],
+      "scored": true,
+      "prediction": "observed",
+      "interval_errors": [],
+      "timing": {
+        "true_positives": 2,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.7896260838492353,
+          0.8427651819185586
+        ],
+        "onset_errors_seconds": [
+          0.28923900000000025,
+          0.8893389999999997
+        ],
+        "offset_errors_seconds": [
+          0.566179,
+          1.7432889999999972
+        ],
+        "iou": 0.8323817792939253,
+        "provisional": false,
+        "valid": true
+      },
+      "provisional": false,
+      "predicted_intervals": [
+        {
+          "start": 5.0,
+          "end": 8.5
+        },
+        {
+          "start": 17.5,
+          "end": 32.5
+        }
+      ],
+      "correct": true,
+      "clip_id": "03_pet_trapped",
+      "behavior": "danger",
+      "category": "safety_watch",
+      "evidence": [
+        "White dog Babi is firmly wedged with head/body between vertical bars of black pool fence, struggling and unable to free itself until inspector pries bars apart and lifts it out. Entrapment risks strangulation, pressure injury and distress."
+      ],
+      "raw_timing": {
+        "true_positives": 2,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "matched_ious": [
+          0.7896260838492353,
+          0.8427651819185586
+        ],
+        "onset_errors_seconds": [
+          0.28923900000000025,
+          0.8893389999999997
+        ],
+        "offset_errors_seconds": [
+          0.566179,
+          1.7432889999999972
+        ],
+        "iou": 0.8323817792939253,
+        "provisional": false,
+        "valid": true
+      },
+      "predicted_episodes": [
+        {
+          "start": 5.0,
+          "end": 8.5,
+          "intervals": [
+            {
+              "start": 5.0,
+              "end": 8.5
+            }
+          ],
+          "detected_seconds": 3.5
+        },
+        {
+          "start": 17.5,
+          "end": 32.5,
+          "intervals": [
+            {
+              "start": 17.5,
+              "end": 32.5
+            }
+          ],
+          "detected_seconds": 15.0
+        }
+      ]
+    }
+  ],
+  "timings": [
+    {
+      "clip_id": "dog_drinking_8056538",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 7.2,
+      "ready_seconds": 19.78148595802486,
+      "safety_ready_seconds": 19.78148595802486,
+      "event_ready_seconds": {
+        "drinking": 19.78148595802486,
+        "eating": 19.78148595802486,
+        "playing_with_mask": 19.78148595802486,
+        "furniture_chewing": 19.78148595802486,
+        "standing_on_hind_legs": 19.78148595802486
+      },
+      "cleanup_complete_seconds": 24.992504000023473,
+      "checks": [
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 4.239675207994878,
+          "inference_seconds": 15.196908792015165,
+          "result_ready_seconds": 19.44078212499153,
+          "cleanup_seconds": 5.205853124964051
+        }
+      ]
+    },
+    {
+      "clip_id": "dog_playing_with_mask_8056264",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 12.68,
+      "ready_seconds": 30.489974292053375,
+      "safety_ready_seconds": 30.489974292053375,
+      "event_ready_seconds": {
+        "drinking": 30.489974292053375,
+        "eating": 30.489974292053375,
+        "playing_with_mask": 30.489974292053375,
+        "furniture_chewing": 30.489974292053375,
+        "standing_on_hind_legs": 30.489974292053375
+      },
+      "cleanup_complete_seconds": 35.631281542009674,
+      "checks": [
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 7.34456133301137,
+          "inference_seconds": 22.636383250006475,
+          "result_ready_seconds": 29.984486208995804,
+          "cleanup_seconds": 5.135314624989405
+        }
+      ]
+    },
+    {
+      "clip_id": "06_furniture_chewing",
+      "window_id": "0000",
+      "comparable_to_single_window_run": false,
+      "source_duration_seconds": 14.881466666666666,
+      "ready_seconds": 21.933234167052433,
+      "safety_ready_seconds": 21.933234167052433,
+      "event_ready_seconds": {
+        "barking": 9.489011957950424,
+        "drinking": 21.933234167052433,
+        "eating": 21.933234167052433,
+        "playing_with_mask": 21.933234167052433,
+        "furniture_chewing": 21.933234167052433,
+        "standing_on_hind_legs": 21.933234167052433
+      },
+      "cleanup_complete_seconds": 23.553053291980177,
+      "checks": [
+        {
+          "model": "muse-spark-1.2-contributor",
+          "media_kind": "audio",
+          "status": "completed",
+          "upload_seconds": 0,
+          "inference_seconds": 9.065180624951608,
+          "result_ready_seconds": null,
+          "cleanup_seconds": null
+        },
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 6.553211875027046,
+          "inference_seconds": 15.359188250033185,
+          "result_ready_seconds": 21.91674487502314,
+          "cleanup_seconds": 5.187837290985044
+        }
+      ]
+    },
+    {
+      "clip_id": "04_intensive_barking",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 19.119033333333334,
+      "ready_seconds": 24.716232875012793,
+      "safety_ready_seconds": 24.716232875012793,
+      "event_ready_seconds": {
+        "barking": 14.50260295899352,
+        "drinking": 24.716232875012793,
+        "eating": 24.716232875012793,
+        "playing_with_mask": 24.716232875012793,
+        "furniture_chewing": 24.716232875012793,
+        "standing_on_hind_legs": 24.716232875012793
+      },
+      "cleanup_complete_seconds": 28.895037542039063,
+      "checks": [
+        {
+          "model": "muse-spark-1.2-contributor",
+          "media_kind": "audio",
+          "status": "completed",
+          "upload_seconds": 0,
+          "inference_seconds": 13.498032583971508,
+          "result_ready_seconds": null,
+          "cleanup_seconds": null
+        },
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 11.441805624985136,
+          "inference_seconds": 12.269933375006076,
+          "result_ready_seconds": 23.71884616697207,
+          "cleanup_seconds": 4.172186332987621
+        }
+      ]
+    },
+    {
+      "clip_id": "05_hind_legs",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 10.009833333333333,
+      "ready_seconds": 19.475608000007924,
+      "safety_ready_seconds": 19.475608000007924,
+      "event_ready_seconds": {
+        "barking": 17.764376749983057,
+        "drinking": 19.475608000007924,
+        "eating": 19.475608000007924,
+        "playing_with_mask": 19.475608000007924,
+        "furniture_chewing": 19.475608000007924,
+        "standing_on_hind_legs": 19.475608000007924
+      },
+      "cleanup_complete_seconds": 23.587359874974936,
+      "checks": [
+        {
+          "model": "muse-spark-1.2-contributor",
+          "media_kind": "audio",
+          "status": "completed",
+          "upload_seconds": 0,
+          "inference_seconds": 17.465813332994003,
+          "result_ready_seconds": null,
+          "cleanup_seconds": null
+        },
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 7.483079833968077,
+          "inference_seconds": 11.694354666979052,
+          "result_ready_seconds": 19.183234916999936,
+          "cleanup_seconds": 4.10285795800155
+        }
+      ]
+    },
+    {
+      "clip_id": "01_cat_in_can",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 15.633268229166667,
+      "ready_seconds": 20.779998041980434,
+      "safety_ready_seconds": 20.779998041980434,
+      "event_ready_seconds": {
+        "barking": 14.862023667024914,
+        "drinking": 20.779998041980434,
+        "eating": 20.779998041980434,
+        "playing_with_mask": 20.779998041980434,
+        "furniture_chewing": 20.779998041980434,
+        "standing_on_hind_legs": 20.779998041980434
+      },
+      "cleanup_complete_seconds": 25.9012650839868,
+      "checks": [
+        {
+          "model": "muse-spark-1.2-contributor",
+          "media_kind": "audio",
+          "status": "completed",
+          "upload_seconds": 0,
+          "inference_seconds": 14.274778167018667,
+          "result_ready_seconds": null,
+          "cleanup_seconds": null
+        },
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 7.519911832991056,
+          "inference_seconds": 12.673544459044933,
+          "result_ready_seconds": 20.19969229202252,
+          "cleanup_seconds": 5.115614874986932
+        }
+      ]
+    },
+    {
+      "clip_id": "02_home_fire",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 24.266471354166665,
+      "ready_seconds": 22.384639208961744,
+      "safety_ready_seconds": 22.384639208961744,
+      "event_ready_seconds": {
+        "barking": 7.532383041980211,
+        "drinking": 22.384639208961744,
+        "eating": 22.384639208961744,
+        "playing_with_mask": 22.384639208961744,
+        "furniture_chewing": 22.384639208961744,
+        "standing_on_hind_legs": 22.384639208961744
+      },
+      "cleanup_complete_seconds": 26.79086470900802,
+      "checks": [
+        {
+          "model": "muse-spark-1.2-contributor",
+          "media_kind": "audio",
+          "status": "completed",
+          "upload_seconds": 0,
+          "inference_seconds": 6.984896457986906,
+          "result_ready_seconds": null,
+          "cleanup_seconds": null
+        },
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 5.781282166019082,
+          "inference_seconds": 16.061719624965917,
+          "result_ready_seconds": 21.849141207989305,
+          "cleanup_seconds": 4.399625833029859
+        }
+      ]
+    },
+    {
+      "clip_id": "03_pet_trapped",
+      "window_id": "0000",
+      "comparable_to_single_window_run": true,
+      "source_duration_seconds": 52.1,
+      "ready_seconds": 41.2098124169861,
+      "safety_ready_seconds": 41.2098124169861,
+      "event_ready_seconds": {
+        "barking": 14.182286750001367,
+        "drinking": 41.2098124169861,
+        "eating": 41.2098124169861,
+        "playing_with_mask": 41.2098124169861,
+        "furniture_chewing": 41.2098124169861,
+        "standing_on_hind_legs": 41.2098124169861
+      },
+      "cleanup_complete_seconds": 45.69543091696687,
+      "checks": [
+        {
+          "model": "muse-spark-1.2-contributor",
+          "media_kind": "audio",
+          "status": "completed",
+          "upload_seconds": 0,
+          "inference_seconds": 11.545651749998797,
+          "result_ready_seconds": null,
+          "cleanup_seconds": null
+        },
+        {
+          "model": "muse-spark-1.3-contributor",
+          "media_kind": "visual",
+          "status": "completed",
+          "upload_seconds": 25.757207957969513,
+          "inference_seconds": 12.822880833002273,
+          "result_ready_seconds": 38.58856725000078,
+          "cleanup_seconds": 4.47945179202361
+        }
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "at": "2026-11-02T09:11:08.218502+00:00",
+      "type": "visual_rerun",
+      "clip_id": "06_furniture_chewing",
+      "old_description": "A pet bites, chews, or pulls furniture or its upholstery with its mouth.",
+      "new_description": "Alert when the pet is biting, chewing, or pulling on furniture. Biting and chewing involve the mouth, while pulling counts whether done with the mouth or paws. Resting at the same time still counts if any of biting, chewing, or pulling is happening.",
+      "note": "After an initial missed detection, the furniture event definition was expanded to clarify biting, chewing, pulling with the mouth or paws, and concurrent resting. A visual rerun detected chewing at 0–10s. The remaining visual events, Safety Watch instructions, silent input, model and reasoning settings were unchanged. The original audio check was retained, so this clip combines separate inference runs and is excluded from aggregate latency."
+    },
+    {
+      "at": "2026-11-02T09:11:08.218502+00:00",
+      "type": "excluded_clip",
+      "clip_id": "dog_eating_8056266",
+      "note": "The eating-at-bowl recording was excluded after the initial evaluation because obscured bowl contents prevented reliable annotation of eating versus drinking. Labels for the remaining clips were unchanged."
+    }
+  ],
+  "latency": {
+    "mean_window_ready_seconds": 25.548250113289605,
+    "note": "Processing from an already-available window, including preparation; no live capture wait. Cleanup is separate. Clips combining checks from separate runs are excluded from the latency mean."
+  },
+  "limitations": [
+    "Small development set, not held-out evidence or a broad safety validation.",
+    "Revised development-set results: exclusions and prompt changes after initial results are listed in Revisions. No repeatability estimate.",
+    "Clip/event accuracy and false-positive counts are not alert-level false-alarm rates.",
+    "Safety Watch is scored as any visible danger, not hazard kind or identity accuracy.",
+    "Unavailable checks are excluded from classification accuracy and reported in processing coverage.",
+    "Only the original labeled source-time intervals are used; long-term absence and hotspot accuracy are not evaluated."
+  ],
+  "report_provenance": {
+    "scorer_sha256": "ef86a8bfcbc8c97e89bee0890ee5b5fcac182254632bff3c283cf10adab755bd",
+    "matching_sha256": "84fe373d37e57ae22478ef1d9dd8dd1ae59f50aa1914e67a040837dc4ce5a7b5",
+    "episode_merging_sha256": "de830312d95a10f44746ef2eb202407f193174dca1c467a2c2f30fb564f09430",
+    "scored_at": "2026-11-02T09:16:20.273933+00:00",
+    "visualization_sha256": "c2e51cbd1739c1efb1f1001c2f20191d8338f07102cbbbba0736424dd9506ff8"
+  },
+  "timeline_charts": [
+    {
+      "clip_id": "dog_drinking_8056538",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/dog_drinking_8056538.png",
+      "sha256": "ef0e07032a61277aa1bc5204c7fa22ddfafbc39972ddbe10200079087bcb2db1"
+    },
+    {
+      "clip_id": "dog_playing_with_mask_8056264",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/dog_playing_with_mask_8056264.png",
+      "sha256": "357a9a0d60c13fe3a8157593a4d476e48bc765d51b52de605f14e03b6719cdaa"
+    },
+    {
+      "clip_id": "06_furniture_chewing",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/06_furniture_chewing.png",
+      "sha256": "21915f2ac56a18f382d2d19554fbc59971568902a80a3b8a87158adcf4e189a5"
+    },
+    {
+      "clip_id": "04_intensive_barking",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/04_intensive_barking.png",
+      "sha256": "80727226f38f9e165c2e9bd21345c52be34e79f46ef944cab9c4d7986a84e9ff"
+    },
+    {
+      "clip_id": "05_hind_legs",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/05_hind_legs.png",
+      "sha256": "80f98b609a2e2371acc533b43c77b326f8517ba4328e7121a41864d5b1b58209"
+    },
+    {
+      "clip_id": "01_cat_in_can",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/01_cat_in_can.png",
+      "sha256": "dbe689cf3bb93159f24e1f9cfc3409585e68abdc5236bfcaab7c80082f6a8d1e"
+    },
+    {
+      "clip_id": "02_home_fire",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/02_home_fire.png",
+      "sha256": "267280200c594181233916c86dd7466cf322fd48d57bf0a702a79ff446c966db"
+    },
+    {
+      "clip_id": "03_pet_trapped",
+      "file": "/Users/user/Projects/pawception/data/evaluations/submission-20261102T082730_792914Z/timelines/03_pet_trapped.png",
+      "sha256": "19cecafc7e0b16029ed344138a01b0dc7db6679a6096f8d1e57fbd315bffff27"
+    }
+  ],
+  "interactive_report_url": "http://127.0.0.1:8765/evaluation-reports/submission-20261102T082730_792914Z/report.html"
+}

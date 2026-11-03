@@ -1,0 +1,44 @@
+.pipeline-picker {display:grid;gap:10px;min-width:260px;max-width:420px}
+.pipeline-picker label,.pipeline-picker>span {font-size:12px;color:var(--muted)}
+.pipeline-picker select {padding:10px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;max-width:100%}
+.pipeline-stats {display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.pipeline-stat {background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.pipeline-stat strong {font-size:25px;display:block;margin-bottom:7px;font-weight:500}
+.pipeline-stat span {font-size:12px;color:var(--muted)}
+.pipeline-workspace {display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,1fr);gap:24px;margin-top:22px;align-items:start}
+.pipeline-player-card {background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+#pipeline-video {width:100%;aspect-ratio:16/9;display:block;background:#18221c;border-radius:7px}
+.pipeline-transport {display:flex;align-items:center;justify-content:space-between;gap:10px;margin:15px 0;font-size:12px}
+#pipeline-scrubber {width:100%;accent-color:var(--green)}
+.pipeline-caption {font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:0}
+.pipeline-legend {list-style:none;display:flex;flex-wrap:wrap;gap:10px 16px;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+.pipeline-legend li {display:flex;align-items:center;gap:6px;white-space:nowrap}
+.pipeline-legend li>span {position:relative;width:14px;height:12px;flex-shrink:0}
+.pipeline-legend .pipeline-bar {top:1px;left:0;width:14px;height:10px}
+.pipeline-legend .pipeline-bar.playhead {left:6px;top:-1px;width:2px;height:14px}
+.pipeline-legend .pipeline-bar.frontier {left:6px;top:-1px;width:0;min-width:0;height:14px}
+.pipeline-inspector {position:sticky;top:20px;max-height:85vh;overflow:auto}
+.pipeline-inspector h3 {font-family:var(--serif);font-size:25px;font-weight:400;margin:8px 0 18px}
+.pipeline-inspector p {line-height:1.7}
+.pipeline-inspector pre {font-size:11px;max-height:330px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.pipeline-inspector details {margin:15px 0}
+.pipeline-axis,.pipeline-track-row {display:grid;grid-template-columns:112px 1fr;gap:12px;min-height:34px;align-items:center}
+.pipeline-axis {font-size:10px;color:var(--muted);margin:20px 0 10px}
+.pipeline-axis>div:last-child {display:flex;justify-content:space-between}
+.pipeline-track-row>span {font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+.pipeline-track-row>span small {display:block;color:var(--muted);font-size:10px}
+.pipeline-track {height:22px;position:relative;background:#eff0e8;border-radius:4px}
+.pipeline-bar {position:absolute;top:2px;height:18px;border:0;border-radius:3px;background:var(--soft-blue);min-width:2px;padding:0}
+.pipeline-bar.observed {background:#82a98c}
+.pipeline-bar.not_observed {background:#d2dbcf}
+.pipeline-bar.error,.pipeline-bar.invalid,.pipeline-bar.interrupted,.pipeline-bar.skipped {background:#c77462}
+.pipeline-bar.pending,.pipeline-bar.running {background:transparent;border:1px dashed #a3aaa0}
+.pipeline-bar.event {background:var(--blue)}
+.pipeline-bar.alert {background:#c58032;min-width:7px}
+#mock-tab {display:none}
+.pipeline-bar.playhead {width:2px;top:-3px;height:28px;background:var(--ink);pointer-events:none;z-index:5}
+.pipeline-bar.frontier {width:0;top:-3px;height:28px;background:none;border-left:2px dashed #81877e;pointer-events:none}
+.pipeline-note.synthetic {border-left-color:#c58032;background:#fff0db}
+#pipeline-error {padding:15px;color:#823f2b;background:#f7e6db;border-radius:8px}
+@media(max-width:1050px) {.pipeline-workspace {grid-template-columns:1fr}.pipeline-inspector {position:static;max-height:none}}
+@media(max-width:650px) {.pipeline-stats {grid-template-columns:1fr 1fr}.pipeline-picker {min-width:0;width:100%}.pipeline-transport {flex-wrap:wrap}.pipeline-track-row,.pipeline-axis {grid-template-columns:85px 1fr;gap:8px}.pipeline-player-card {padding:12px}}
